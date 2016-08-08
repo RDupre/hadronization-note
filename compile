@@ -1,0 +1,10 @@
+#! /bin/bash
+
+rm -f *.{blg,bbl,toc,out,log,aux,pdf,dvi,maf,mtc,nlo,brf}*
+
+pdflatex AnalysisNote
+bibtex AnalysisNote
+pdflatex AnalysisNote
+pdflatex AnalysisNote
+
+rm -f *.{blg,bbl,toc,out,log,aux,dvi,maf,mtc,nlo,brf}*

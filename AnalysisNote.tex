@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt,twoside]{article}
+        \usepackage{graphicx,type1cm,eso-pic,color}
+        \usepackage{hyperref}
+        \usepackage{longtable}
+        \usepackage{amsmath,amssymb} 
+        \usepackage[latin1]{inputenc}
+        \usepackage[OT1]{fontenc}
+        \usepackage{setspace}
+        \usepackage{epigraph}
+
+
+
+\hypersetup{
+     backref=true,    %permet d'ajouter des liens dans...
+     pagebackref=true,%...les bibliographies
+     hyperindex=true, %...les index.
+     colorlinks=true, %colorise les liens
+     breaklinks=true, %permet le retour à la ligne dans les liens trop longs
+     urlcolor= blue, %couleur des hyperliens
+     linkcolor= black, %couleur des liens internes
+     bookmarks=true, %créé des signets pour Acrobat
+     bookmarksopen=true,            %si les signets Acrobat sont créés,
+                                    %les afficher complètement.
+     pdftitle={Hadronization Analysis Note (EG2)}, %informations apparaissant dans
+     pdfauthor={Raphael Dupre},     %dans les informations du document
+     pdfsubject={Physics}          %sous Acrobat.
+}
+
+\setlength{\hoffset}{-18pt}  	
+\setlength{\oddsidemargin}{20pt} 	% Marge gauche sur pages impaires
+\setlength{\evensidemargin}{20pt} 	% Marge gauche sur pages paires
+\setlength{\marginparwidth}{54pt} 	% Largeur de note dans la marge
+\setlength{\textwidth}{440pt} 		% Largeur de la zone de texte (17cm)
+\setlength{\voffset}{18pt}	        % Bon pour DOS
+\setlength{\marginparsep}{7pt} 	 	% Séparation de la marge
+\setlength{\topmargin}{0pt} 	        % Pas de marge en haut
+\setlength{\headheight}{13pt} 		% Haut de page
+\setlength{\headsep}{0pt}              % Entre le haut de page et le texte
+\setlength{\footskip}{27pt} 	        % Bas de page + séparation
+\setlength{\textheight}{600pt} 	 	% Hauteur de la zone de texte (25cm)
+
+
+\newcommand{\xbp}{$x_{Bj}$}
+\newcommand{\xb}{$x_{Bj}~$}
+\newcommand{\ptp}{$p_\perp^2$}
+\newcommand{\pt}{$p_\perp^2~$}
+\newcommand{\dptp}{$\Delta \langle p_\perp^2 \rangle$}
+\newcommand{\dpt}{$\Delta \langle p_\perp^2 \rangle ~$}
+
+
+\makeatother
+
+\title{Study of the hadronization of $\pi^-$}
+
+\author{Rapha\"el \textsc{Dupr\'e}, 
+Lamiaa \textsc{El Fassi}\thanks{also {\it Rutgers University}} , 
+Kawtar \textsc{Hafidi} ... \\ 
+{\it Physics Division, Argonne National Laboratory,} \\
+{\it Argonne, Illinois 60439, USA} }
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%doublespacing
+%onehalfspacing
+%\linenumbers
+\renewcommand{\baselinestretch}{1.10}
+
+\begin{abstract}
+Hadronization is the process by which energetic quarks transform into 
+colorless hadrons. The process is non-perturbative, therefore, only 
+qualitative understanding can be achieved, and using phenomenological models 
+is necessary. It is believed that hadronization has two distinct phases: 
+the quark propagation phase, where the quark emit gluons until it neutralizes 
+its color by forming a pre-hadron and the hadron formation phase, where the 
+pre-hadron evolves into a hadron. Those process are respectively characterized 
+by the production time and the formation time. By comparing hadron production 
+on different nuclei, one can measure variables with different sensitivities 
+to the hadronization phases, the two principal variables are: the transverse 
+momentum broadening, that is believed to be tightly connected to quark energy 
+loss and the multiplicity ratio, which is a measure of the hadron attenuation 
+in the medium.
+
+The goals of the experiment E-02-104 are to study both quark propagation
+and hadronization dynamic using various nuclear target.
+In this analysis we focus on two particles, the negative pion and the proton.
+Our goals are to constrain the theoritical models and extract the production
+time using precise multidimensional analysis of $\pi^+$ and $\pi^-$ to enlight possible
+new physical processes with a precise analysis of proton production in nuclei.
+
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\include{intro}
+
+\include{chap5}
+
+\include{chap6}
+
+\bibliography{hadro}
+\bibliographystyle{plain}
+
+\end{document}
