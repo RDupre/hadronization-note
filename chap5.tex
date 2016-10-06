@@ -8,8 +8,8 @@ experiments E-02-104 \cite{Brooks:2002aa} and E-02-110 \cite{Hafidi:2002aa}.
 The code name for the run is {\it eg2}, it was composed of three phases 
 labeled {\it a}, {\it b} and {\it c}. The analysis is performed on the data 
 collected in the beginning of 2004 during the third phase ({\it eg2c}), for 
-which the beam energy was 5.014 GeV\footnote{The other phases gave a small 
-amount of data at a beam energy of 4 GeV.}.
+which the beam energy was 5.014~GeV\footnote{The other phases of the run gave only small 
+amounts of data at a beam energy of 4~GeV that we decided not to use for this analysis.}.
 
 As the two experiments, running simultaneously, aimed at comparing deuterium 
 with heavier nuclei, it was decided to use a double target system 
@@ -32,11 +32,13 @@ allowing to change targets remotely, in the picture the top arm is in the beam l
 \end{figure}
 
 The analysis of the experiment E-02-110, focusing on the study of color 
-transparency effects, has been approved recently \cite{ElFassi:2008}. As this 
+transparency effects, has been approved and published~\cite{ElFassi:2008}. As this 
 analysis went through a careful review by the CLAS collaboration, we use
-similar analysis methods when possible. In particular, the electron selection 
+similar analysis methods as much as possible. In particular, the electron selection 
 presented here is very similar to theirs; the main difference being a new 
-target determination method.
+target determination method. The pion identification methods are however tightened
+in this analysis as we have less constraints on the kinematics to exclude possible
+contaminations.
 
 In the section \ref{sec:pid}, we identify the following particles e$^-$, 
 $\pi^-$ and $\pi^+$ using a series of cuts on the various 
@@ -160,8 +162,7 @@ according to the bending direction of the tracks in the drift chamber.
 Positively charged particles are identified as positrons. In the rest of the 
 analysis we use events with only one electron and no positron to avoid any 
 confusion between the scattered electron and electrons from hadronic decays or 
-photon conversion to $e^+e^-$ pair, which often lead to the production of a
-positron.
+photon conversion.
 
 \subsubsection{$\pi^-$ Identification}
 \label{PiId}
@@ -227,7 +228,7 @@ with only a small effect on the final results (see section \ref{SysId}
 for details). Because protons could lead to even more contamination than kaons, 
 a stricter cut is used at high momentum. This cut is also justified by 
 HERMES data \cite{Airapetian:2007vu}, which show a very 
-different behavior of the protons compared to the other hadrons (see chapter \ref{chap:data}).
+different behavior of the protons compared to the other hadrons.
 
 \begin{figure}[tbp]
 \centering
@@ -283,8 +284,9 @@ coordinates, are given in table \ref{tab:targets}.
     \hline
   \end{tabular}
   \caption{Measured mean vertex position of targets, relative to the center of 
-           CLAS (in cm). (Aluminum data are separated in two sets because the 
-           target position appears to have changed at some point.)}
+           CLAS (in cm). We note that aluminum data are separated in two sets because the 
+           target position has brutally changed, moreover
+           during these runs the deuterium target was empty.}
   \label{tab:targets}
 \end{table}
 
@@ -339,16 +341,16 @@ for each run.}
 \label{sec:obs}
 
 Since we are interested in deep inelastic scattering, we use the following 
-cuts: $Q^2 > 1$~GeV$^2$/c$^2$ and $W > 2$~GeV. We also apply a cut $y < 0.85$ to 
-reduce the impact of radiative effects, which will be discussed in more details in 
-the section \ref{RadCor}.
+cuts: $Q^2 > 1$~GeV$^2$/c$^2$ and $W > 2$~GeV. We also apply a cut $y < 0.85$ 
+which corresponds to low energy electrons. These are removed beacause they are
+significantly affected by radiative effects and at the limit of our trigger 
+threshold.
 
 \subsubsection{Method}
 \label{RatioCalc}
 
 Once the identification is done, the calculation of the observables is 
-straight forward and the statistical errors are calculated with this expression
-
+straight forward with statistical errors given by:
 \begin{equation}
 {\delta \left ( R_A^h \right ) \over R_A^h} = \sqrt{ 1 /N_A^h + 1/ N_A^e +1/N_D^h + 1/N_D^e}
 \end{equation}
@@ -359,9 +361,8 @@ and
  + \left ({\langle P_\perp^4 \rangle - \langle P_\perp^2 \rangle ^2}\right )_D / N_D^h.
 \end{equation}
 
-The implementation of acceptance and radiative corrections is done through weights
-given to each particles depending on its kinematic. The multiplicity ratio becomes
-
+However, the implementation of acceptance and radiative corrections is done through weights
+given to each events depending on their kinematics. The multiplicity ratio then becomes
 \begin{equation}
 R_A^h (Q^2,\nu,z_h,P_\perp^2) = {{\sum \omega_A^h (Q^2,\nu,z_h,P_\perp^2) / \sum \omega_A^e (Q^2,\nu)} 
                        \over {\sum \omega_D^h (Q^2,\nu,z_h,P_\perp^2) / \sum \omega_D^e (Q^2,\nu)}},
@@ -373,11 +374,10 @@ The expression for the transverse momentum broadening remains
 \end{equation}
 but with
 \begin{equation}
-\langle P_\perp^2 \rangle = {\sum P_\perp^2 \times \omega (Q^2,\nu,z_h,P_\perp^2) \over \sum \omega (Q^2,\nu,z_h,P_\perp^2)}.
+\langle P_\perp^2 \rangle = {\sum \left ( P_\perp^2 \times \omega (Q^2,\nu,z_h,P_\perp^2) \right ) \over \sum \omega (Q^2,\nu,z_h,P_\perp^2)}.
 \end{equation}
 
-This expressions leads to new expressions for the statistical error uncertainties: 
-
+This expressions leads to new expressions for the statistical error uncertainties taking weights into account: 
 \begin{equation}
 {\delta \left ( R_A^h \right ) \over R_A^h} = 
       \sqrt{ \left ( {\sum {\omega^h_A}^2 \over \left (\sum \omega^h_A \right )^2} \right ) 
@@ -399,8 +399,9 @@ This expressions leads to new expressions for the statistical error uncertaintie
 \subsubsection{Preliminary Results}
 \label{prelim}
 
-We present in figure \ref{fig:prelim} few preliminary results, before the application of any correction, with the goal to 
-provide a first idea on data quality. The preliminary results will also be used to 
+We present in figure \ref{fig:prelim} few preliminary results, before the application 
+of any correction, to 
+provide a first idea on data quality. These preliminary results will also be used to 
 illustrate the effects of the corrections discussed below.
 
 \begin{figure}[htb]
@@ -436,35 +437,41 @@ To correct for acceptance effects, we simulated a total of a 100 million events
 per target ($^2$H, C, Fe and Pb) using the PYTHIA \cite{Sjostrand:2006za} 
 event generator slightly modified to include Fermi motion effects. The 
 generated events are processed by the CLAS software (GSIM, GPP and user\_ana) 
-to simulate the detector and the reconstruction process similarly to the one for experimental data.
+to simulate the detector and the reconstruction process similarly to the one for 
+experimental data.
+% TODO GPP factors
 
 Then the simulated data are processed in a similar way than the experimental data by 
 applying the cuts described in the section \ref{sec:pid}. Overall the 
 simulation reproduces quite well the detectors responses, yet two issues might 
-affect us and have to be understood. First, the efficiency of the CC is overestimated in the simulation. 
+affect us and have to be understood. First, the efficiency of the CC is 
+overestimated in the simulation. 
 On the electron side the signal is a little stronger in the simulation (11 
 photo-electrons) compared to experimental data (8 photo-electrons), but this 
 feature should not affect us too much, because we are cutting only the tail of the 
-distribution in both cases. For pion identification, as mentioned in section \ref{PiId},
-we do not use the CC because of its unexpectedly low efficiency 
-We observe, in the simulation, a much better detector response than in experiment 
-(figure \ref{simPionCC} compared to figure \ref{PionCC}), this result also advocates against the use of the CC in the 
-particle identification. Indeed, the poor reproduction of the experimental signal would introduce a bias in our acceptance correction. 
+distribution in both cases. 
+%For pion identification, as mentioned in section \ref{PiId},
+%we do not use the CC because of its low efficiency.
+%We observe, in the simulation, a much better detector response than in experiment 
+%(figure \ref{simPionCC} compared to figure \ref{PionCC}), this result also 
+%advocates against the use of the CC in the 
+%particle identification. Indeed, the poor reproduction of the experimental 
+%signal would introduce a bias in our acceptance correction. 
 Second, in figure \ref{vertex} the cuts on vertex are shifted from one sector 
 to another, since the simulation have perfect alignment of beam with CLAS this 
 feature is not present in the simulated data. Therefore, we do not apply the 
 shift from the table \ref{tab:vertex} to the simulation; results are shown in 
 figure~\ref{simvertex}.
 
-\begin{figure}[tpb]
-\centering
-\includegraphics[width=9cm] {chap5-fig/fig06simul.png} 
-\caption {Histograms of momentum (GeV/c) of $\pi^-$ for {\bf simulated data}.
-In black are all identified $\pi^-$, in red pions that also fire in the 
-Cherenkov counter and in blue those that fire in the Cherenkov counter with 
-more than one photo-electron.}
-\label{simPionCC}
-\end{figure}
+%\begin{figure}[tpb]
+%\centering
+%\includegraphics[width=9cm] {chap5-fig/fig06simul.png} 
+%\caption {Histograms of momentum (GeV/c) of $\pi^-$ for {\bf simulated data}.
+%In black are all identified $\pi^-$, in red pions that also fire in the 
+%Cherenkov counter and in blue those that fire in the Cherenkov counter with 
+%more than one photo-electron.}
+%\label{simPionCC}
+%\end{figure}
 
 \begin{figure}[tpb]
 \centering
@@ -582,11 +589,11 @@ Three factors are sources of problematic bins:
 \begin{itemize}
  \item too large weight values, i.e. very small acceptance;
  \item very few events reconstructed, leading to large statistical errors;
- \item many events that were generated in another bin (bin migration).
+ \item large fraction of events originaly generated in another bin (bin migration).
 \end{itemize}
 To remove these bins we apply the following cuts:
 \begin{equation} \label{eq:AccL1}
-\left ({\delta \omega \over \omega}\right ) ^2 \times {R_c \over \omega} < 2,
+\left ({\delta \omega \over \omega}\right ) ^2 \times R_c \times \omega < 2,
 \end{equation}
 and
 \begin{equation} \label{eq:AccL2}
@@ -603,10 +610,10 @@ reweighting by calculating a new acceptance in a two dimensional binning:
 \begin{equation}
 \text{Acc}_2(\nu,p_h) = {\sum_{rec} \omega (\nu,x_{Bj},p_h,t)\over N_{gen}(\nu,p_h)}.
 \end{equation}
-with $\omega$ either the previously calculated weights or one for the 
-excluded bins.
+with $\omega$ the previously calculated weights or one for the 
+bins excluded by the cuts.
 One of the criteria for setting the limits in equation \ref{eq:AccL1} and 
-\ref{eq:AccL2} is to keep the reweighting factors $\omega_2 = 1/\text{Acc}_2$ at a few 
+\ref{eq:AccL2}is to keep the reweighting factors $\omega_2 = 1/\text{Acc}_2$ at a few 
 percents level.
 
 \begin{figure}[tbp]
@@ -640,13 +647,12 @@ represented, shows the new results after applying the acceptance correction.
 The acceptance effects appear to be of $\sim 10$\% for multiplicity ratios and 
 $\sim 30$\% for transverse momentum broadening. This is a surprisingly 
 significant correction for the few centimeters between the two targets. The 
-$\pi^-$s are more affected because of CLAS' magnetic field. Indeed, the low \pt
-$\pi^-$s have very low acceptance, this makes the errors 
-on \dpt very large and the related results difficult to exploit. Finally, because 
-of some difference in position between the solid targets (table 
-\ref{tab:targets}), some extra simulation is needed in order to exploit 
-correctly the aluminum and tin results. Therefore, these two targets should not be considered for 
-the final results.
+$\pi^-$s appears to be more affected. This is due to the inbending magnetic 
+field. Indeed, the low \pt $\pi^-$s have very low acceptance, leading to large 
+correction factors. The large spread in weights makes the errors 
+on \dpt very large and the related results difficult to exploit. 
+On the bright side, after the correction, the transverse momentum
+broadening of both pions now match.
 
 \subsubsection{Coulomb Correction}
 \label{CCor}
@@ -686,6 +692,8 @@ Pb  & -23 &   -19 \\
 
 \subsubsection{Radiative Correction}
 \label{RadCor}
+
+
 
 Despite its lower magnitude, compared to the strong force, the 
 electromagnetic force might have a non negligible impact on our results. The 
@@ -756,16 +764,19 @@ fraction of the events involved photon radiation.
 \label{fig:RadCorrFacSIDIS}
 \end{figure}
 
-The radiative correction appears to be limited in amplitude in most of the 
-kinematic, so we decided not to apply it before further studies. Improvement can 
-be easily obtained by generating more statistics, in order to analyze the 
-semi-inclusive effects in more depth. Also radiative effects from the target thickness 
-are ignored in the current setup; these need to be evaluated and, eventually, 
-corrected as well.
+The semi-inclusive part of the radiative correction appears to be limited 
+in amplitude in most of the 
+kinematic, except for high $z$ and \ptp. So, we decided not to apply this 
+correction before further studies.
+
+{\color{red} We found a better way to implement the radiative correction,
+that is not limited by the Monte-Carlo technique. We will implement it in
+the second version of the note as we do not want to delay the review process for
+this correction that we already found to be small. Sorry about that.}
 
 \subsubsection{Isospin Correction}
 
-The important excess of neutron in heavy nuclei leads to a modification of the 
+The important excess of neutrons in heavy nuclei leads to a modification of the 
 $\pi$ multiplicity per DIS events. Using Hall~C results 
 \cite{Asaturyan:2011mq}, shown in figure \ref{fig:IsoSpin}, we evaluate 
 correction factors for this effect. Our simple estimation is solely based on 
@@ -773,7 +784,8 @@ proton and neutron numbers; the results for $\pi^+$s are shown in
 table~\ref{tab:isospin}. The effect on $\pi^-$ is found to be coherent with zero,
 therefore no correction is applied for them. 
 We attribute errors of 10\% of the effect for the isospin correction, this is chosen 
-relatively to the precision of the Hall~C measurement.
+relatively to the precision of the Hall~C measurement and the fact that they do not 
+cover as much phase space as we do.
 
 \begin{figure}[tbp]
 \centering
@@ -808,7 +820,7 @@ show no isospin effect in \ptp. This gives good confidence that \dpt is not
 affected by isospin effects.
 
 We finally note that the $A$ dependencies of the multiplicity ratios of the 
-charged pions are similar after the isospin correction\footnote{Within 
+charged pions are parallel after the isospin correction\footnote{Within 
 normalization errors presented in section \ref{sec:TotSys}} (figure 
 \ref{fig:IsoPlot}). Considering previous measurements and existing models, 
 this result was expected and confirm the need for this correction to be applied.
@@ -856,7 +868,7 @@ $\delta \phi = 10$~mrad. These are broader than announced in \cite{Mecking:2003z
 but still reasonable. Then associated systematic errors can be easily 
 evaluated for other variables: $\delta Q^2 \sim 0.013$ GeV$^2$/c$^2$, $\delta z \sim 
 0.4 \%$, $\delta P_\perp^2 \sim 0.004$ GeV$^2$/c$^2$ and so on\footnote{These were 
-evaluated for typical kinematics, the results can be significantly larger at 
+evaluated for typical kinematics, the results can be larger at 
 extreme kinematics (large \pt or Q$^2$).}. These are negligible because they are 
 several times smaller than our usual bin sizes (see figures in section 
 \ref{prelim}). 
@@ -871,10 +883,13 @@ only removes a very little amount of data ($\sim 1$ $\pi$ in 30000). The
 misidentification of electrons is found to be of the order of 1 in a 1000 and 
 does not contribute significantly to the uncertainty. For pions, the main 
 contamination comes from kaons above 2~GeV/c ($\sim$3\% of $\pi^+$ and 
-$\sim$0.5\% of $\pi^-$). Incidentally, protons also contaminates $\pi^+$ at 
-high momentum (up to few \%). The uncertainty related to 
-misidentification is taken into account for the point to point systematic error 
-evaluation, other effects are found to be negligible.
+$\sim$0.5\% of $\pi^-$). Protons also contaminates $\pi^+$ at 
+high momentum (up to few \%). 
+%TODO Justify the pt cut with a figure?
+
+In conclusion, the uncertainty related to misidentification 
+is taken into account at the level of 100\% of the contamination in the point 
+to point systematic errors, other effects are found to be negligible.
 
 \subsubsection{Target Reconstruction}
 
@@ -885,7 +900,8 @@ reconstructed upstream and downstream of the targets, where nothing should be
 detected. We define two test regions (see figure \ref{fig:targetleak}) to evaluate
 the contamination. The region 1 is upstream and chosen to be of the same size as the window used for solid 
 target selection. We use it to evaluate contamination from the liquid target to the solid one. The region 2
-is downstream and of the size of the window for the liquid target selection and allows to evaluate the solid target leak into the liquid one
+is downstream and of the size of the window for the liquid target selection 
+and allows to evaluate the solid target leak into the liquid one.
 The distance between detection and test regions is identical to the 
 distance between the two detection regions. 
 
@@ -907,10 +923,11 @@ another.}
 
 \subsubsection{Acceptance}
 
-We apply two different acceptance corrections to the data using two different binnings 
+We tested several different acceptance corrections to the data using finally 
+two different binnings 
 (table \ref{tab:AcceptBinning}). The differences between them give us a good 
-indication on the systematic error associated with the method. Using a sample 
-of results from iron, we find the systematic presented in the table 
+indication on the systematic error associated with the method. Using our
+results on iron, we find the systematic presented in the table 
 \ref{tab:SysAcc}. We note the significantly larger errors for $\pi^-$, which 
 was expected because of the smaller acceptance and the larger weights. More 
 significant are the large errors on the \dpt measurements, this is mainly due to 
@@ -919,8 +936,10 @@ significantly. As was seen in figure~\ref{fig:AcceptPlots}, error bars are much
 larger for corrected \dpt indicating an important statistical 
 sensitivity introduced by the weighting. The errors on \dpt are of the same 
 order, or smaller, as the differences observed between the two sets. This is 
-an indication that the uncertainties reported in table \ref{tab:SysAcc} are already 
-taken into account in the statistical error.
+an indication that the uncertainties reported in table \ref{tab:SysAcc} are 
+similar in nature with the statistical error, in the sense that they originate
+from the large variation between the weights from event to event. For this
+reason, we decide not to include this error in order to double count it.
 
 \begin{table}[htbp]
   \centering
@@ -941,10 +960,13 @@ taken into account in the statistical error.
   \label{tab:SysAcc}
 \end{table}
 
-\subsubsection{Normalization Error}
+\subsubsection{Total Error}
 
-The normalization errors -- i.e. independent of kinematic variables -- are due to acceptance effects, target identification 
-and isospin correction. They are summarized in the table \ref{tab:sysid}. 
+The point to point errors include the contributions from detection 
+contamination and acceptance effects. The normalization errors 
+-- i.e.~independent of kinematic variables -- are due to acceptance effects, 
+target identification and isospin correction. They are summarized in the 
+table~\ref{tab:sysid}. 
 
 \begin{table}[htbp]
   \centering
