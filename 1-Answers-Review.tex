@@ -1,0 +1,358 @@
+\documentclass[12pt]{article}                                            
+\usepackage {epsfig}
+\textwidth  16.0cm
+\textheight 21.5cm
+\topmargin -1.0 cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\pagestyle{plain}
+\headheight 0.3cm 
+\usepackage[dvipsnames]{color} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{Myred}{named}{Red}
+\pagestyle{plain}
+\begin{titlepage}
+\begin{flushright}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{\today}
+\end{flushright}
+\vskip 3.cm
+\centerline{\bf \color{Myred}{M. Wood (chair), S. Manly, and A. Kim} }
+\vskip 0.5cm
+\centerline{\bf \LARGE \color{Myred}{Analysis Review of the :} }
+\vskip 1.cm
+\centerline{\bf \Large ``Study of the Hadronization}
+\vskip 0.5cm
+\centerline{\bf \Large of Charged Pions”''}
+\vskip 0.5cm
+\centerline {\bf  by R. Dupre et al.}
+\vskip .5cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{titlepage}
+\setcounter{page}{2}
+
+The committee has reviewed the analysis note and has a number of comments that should be 
+addressed.  It has been a long time since the data were taken, and it is an interesting study, so 
+we encourage the authors to move forward with the improvements in order to bring it to 
+publication.
+
+This report is organized in 3 sections: lager issues to resolve, questions from the reviewers, and 
+typographical corrections.  There may be some repetition between the 3 sections.  The notation 
+is P\# for page \#.
+
+\section{Larger Issues }
+1.
+Ownership of the pi+ channel.  This was brought up in an email from the committee chair 
+(M. Wood).  Before this analysis can move on to round 2 of the review, the ownership issue 
+has to be resolved.  The NPWG chair (also M. Wood) has left it up to the eg2 group to 
+resolve it.
+
+
+
+2.
+The particle ID and cuts seem to be well understood.  The acceptance correction and 
+radiative corrections need to be developed.  There is confusion about how the acceptance 
+corrections were done (see Section 2 below).  The radiative corrections are incomplete as 
+reported in the note.  Both corrections need to be well-understood before the committee can 
+approve of the analysis.
+
+
+
+3.
+In the next version, line numbers need to be added to the document for easier reference.
+
+\section{Reviewers’ Questions/Comments}
+1.
+P3, para 2- The discussion about the importance of this to neutrino experiments misses the 
+main point.  In neutrino experiments, it is true that nuclei other than hydrogen are used to 
+increase the event rate and to avoid explosions.  That means that nuclear effects come into 
+play.  Fermi motion and final state interactions and correlations cause confusion in the 
+extraction of the signal and reconstruction of the energy of the incoming neutrino.  This 
+leads to less precise determination of the oscillation parameters.  The modeling of nuclear 
+effects is necessary to understand and correct for these effects.  Pion production 
+measurements like this provide ways to tune the models and look at the A dependence.  The 
+A dependence is very important in part because in the long baseline experiments sometimes 
+the near detector and far detectors are made of different materials.  In DUNE, for example, 
+the far detector will be a liquid argon TPC.  It is not yet clear that a liquid argon TPC will 
+work well as a near detector in such an intense neutrino beam.  Clearly you don’t want to 
+say all this on page 3 of the paper.  But I think an additional sentence is warranted.
+
+
+
+
+2.
+P10 footnote: "single photon" could be confusing in this context, since the mean number of 
+10 is from multiple optical photons (produced from a single electron).
+
+
+
+3.
+P13 - The number 0.03 - is it from the fit results of previous analysis note you mentioned in 
+the first chapter? Or is it eyeball fit? If former you could add 1D histogram with fit results 
+plotted to Figure 9?
+
+
+
+4.
+P16 - similarly, 1D fits for positive pion $\Delta\beta$?
+
+
+
+5.
+P16 - You state that the target position could vary from run to run, but “did not happen too 
+often”.  Can you quantify this?  
+
+
+
+6.
+P17, Fig 12 - what solid target is shown?  Are the shifts the same for electrons and pions?
+
+
+
+7.
+P18, Start of section 2.2.5 - I’m not sure I understand the logic in this.  If you have a drift 
+chamber problem, it will be manifest in both the solid and liquid target data and the ratio of 
+these should be relatively stable.  Why do you not determine run quality by looking at the 
+event rate per coulomb of beam current?  For this quantity, a change in the detector 
+operation will show up.
+
+
+
+8.
+P19, FIg. 14- Hard to tell how much data was discarded.  Maybe give a table of means and 
+sigmas for each target or show the cuts on the figure are horizontal lines.
+
+
+
+9.
+P19 - If you use "c" constant in dimensions of Q2, then use it for W as well.
+
+
+
+10.
+P19, Sec. 2.3 - Show plots of Q$^2$, W and y with the cuts.
+
+
+
+11.
+P19, eq. 7 - Is it really just the sum of weights or are they the counts multiplied by the 
+weights?
+
+
+
+12.
+P23, I’d be very worried about the MC modeling acceptance on falling edges like that at the 
+right of the top right plot.
+
+
+
+13.
+P25, I find this discussion quite confusing.   At top you talk about two binnings.  It’s not just 
+binning that is changing, right?  You are using different variables.  Then you talk about the 
+extracted weight, but that weight is defined with only one of those sets of variables.  You 
+also do it for the other set?  Then you an arbitrary weight cut to take care of the problems 
+listed in the middle of the page?  Why not just increase the size of the bins in regions where 
+you have too few events or large bin migration?  I don’t see how the procedure you use 
+does not lead to holes in your data somehow.  And I don’t really understand what you are 
+doing with the second weighting factor.  How is this not doing a double correction for 
+acceptance, i.e., a double counting?  This whole section needs to be reworked.  I am fairly 
+certain that I don’t really understand what you are doing but it leaves me worried that 
+something is amiss.  Anyway, that’s not where you want readers to be.  
+
+
+
+14.
+P26, bottom, if you have regions with very low acceptance, should they be cut out?
+
+
+
+15.
+P26 - "consistent with HERMES results" - could you add HERMES points to the plot with 
+your data points to show what you mean as consistent?
+
+
+
+16.
+P27 fig.22-
+ It's unclear to which point the error bar is associated. I think the common 
+practice is to slightly shift markers horizontally.
+
+
+
+17.
+P27, Fig. 22 - the right column of plots is not the same as those in Fig. 15.  Why change the 
+variables?
+
+
+
+18.
+P28 - What is Coulolmb Correction applied to? Momentum of charged particles? Could you 
+plot effect of this correction on particles? Is it really big enough to be visible within our 
+resolutions ?
+
+
+
+19.
+P30 - 
+fig.24 is missing X axis label. You also may consider 2D histogram for better display.
+
+
+
+20.
+P31 - I don’t understand the isospin correction.  It does smooth out the data in Fig. 27; 
+however, I am missing the physics motivation.  Why does it matter if the quark came from a 
+proton or a neutron?  I think you just clarify the explanation.
+
+
+
+21.
+P33, Sec. 2.5.1 - list the negligible effects.
+
+
+
+22.
+P34, Fig. 28 - why is the resolution poorer than in Fig. 12?
+
+
+
+23.
+P34, why do you have a 1\% normalization error in all the multiplicity ratios when you say just 
+above that for this particular sample with two particles in the final state the events in the test 
+regions dropped to 0.01?  Doesn’t that mean the target contamination normalization error is 
+smaller than 1\%?
+
+
+
+24.
+P34, with this technique of comparing results using the two different sets of variables (you 
+call it two binnings, but I think that is sort of misleading), you are using the same events.  
+Does this not mean you have a statistical contribution to this systematic error?  You say you 
+noticed larger systematic errors for the pi- events due to lower acceptance and bigger 
+weights.  Might it also be lower statistics and so you have statistical fluctuations contributing 
+to the systematic error?  If so, you are sort of double-counting the statistical error and 
+inflating the systematic error more than it should be.  
+
+
+
+25.
+P35 - It would clarify the discussion with a summary or table of the point-to-point systematic 
+errors.
+
+
+
+26.
+P35 -
+ add plots with systematic uncertainty bands on it to demonstrate bin-by-bin values.
+
+
+
+27.
+P35, end of top paragraph, you say you don’t include the acceptance systematic, but it looks 
+to me like it is included in Table 8?  What am I missing?
+
+
+
+28.
+P36, top paragraph, “that a factorization holds” means what??  Should explain.  
+
+
+
+29.
+P36 top of section 3.1.1, 5% versus 5% looks more like 1 sigma rather than the 1.5 sigma 
+you say in the text.
+
+
+
+30.
+P36, second paragraph of section 3.1.1, “... might be modified if the production time occurs 
+inside the nucleus.”  I think I know what you mean but the language makes no sense.  You 
+mean if the formation takes place inside the nucleus, right?
+
+
+
+31.
+P42, top, “... that is seen in our result.”  Where do I see what you are discussing in the top 
+two lines of this page.  I could not find whatever it is.  What should I be looking at?
+
+\section{Typographical Corrections}
+
+Abstract L2, “... non-perturbative; therefore, only...”
+
+P3, para 2:  “... models, including ones relevant for RHIC, because the size of the cold nuclei 
+used in the JLab experiments is stable and known.”
+
+P4, L1, “... the study of pion production over ...”
+
+P4, L3, “... section 1.3, we provide a...”
+
+P5, para 3, L3, “This kind of model is suitable...”
+
+P6, L4, “... a suppression of hadron production ...and it can even reverse sign and increase at 
+very low z.”
+
+P6, bottom paragraph, line 3, “... excess in delta(pt)\^2.  It is notable that ... behavior in models 
+... models do not yet treat baryon hadronization.”
+
+P9, L6, “filled with liquid deuterium”
+
+P9, para2, end of para, “... and detector properties cancel in the nuclear ratio.”
+
+P10, L2, okay for a technical note but here the sentence should be rephrased to something like 
+“For pions, we require a signal in the drift chambers (DC) and scintillator counters (SC) in 
+addition to the successful reconstruction of the time-based tracking.”
+
+P10, L10, “The derivation of these quantities is presented in section 2.3, while a list of 
+corrections  is summarized in section 2.4.  The systematic uncertainty budget is detailed in 
+section 2.5, and ...”
+
+P10, just below equation 3, “ ... and the parameter b varies with momentum, as ...”
+
+P13, L1 of section 2.2.2, sentence makes no sense as written. Do you mean something like, 
+“Negatively charged pion candidates must not pass the electron selection criteria.”
+
+P15, L2 of section 2.2.3 “... (see figure 11) due to a significant...”
+
+P15 bottom, “These cuts minimize the kaon...”
+
+P18, 6 lines from the bottom - “As Figure 14 ...”
+
+P20, L1 of section 2.3.2 “... in figure 15 a few ...”
+
+P21, L2, “... processed by CLAS software (GSIM, GPP and user\_ana) [what do these mean to a 
+non-CLAS reader? supply references] to simulate the detector and the reconstruction process in 
+a fashion similar to that done with the experimental data.”
+Start of next paragraph, “The simulated data are processed like the experimental data by 
+applying ...”  “ ... quite well the detector response, yet ...”
+
+P22, bottom, “... space of our two-particle final state.  However, to evaluate the systematic 
+errors associated with ...”
+
+P33, 2 lines from bottom, “re-scattering on detector material”
+
+P35, top of section 2.5.4, “... contributions from particle misidentification and acceptance ... 
+effects, target misidentification and the isospin ...”
+
+P36, second paragraph of section 3.1.1 -
+ change conciliate to reconcile
+
+P38, Para 3, L2, change signification to significance
+
+P38, bottom, “However, our results (figure 32(left)) show no dependence besides ... and what is 
+left will be washed ...”
+
+P41, first paragraph, what does HERMES say about Q2 dependence?  Line 4, “... in figure 34, 
+does not indicate ...”
+
+P41, bottom paragraph, “... wide A coverage gives a outright indication ... found to be much 
+smaller than that seen by HERMES [15], which ....from BDMPS [29] correlate pt\^2 with the 
+nuclear radius.”
+
+P42, top paragraph, last line, “colored parton does not interact with the whole nucleus which 
+limits the nuclear effect.”
+
+P42 second paragraph, L2, “they predict a rise of delta pt\^2 with Q\^2”
+Same paragraph, L4, “... 38) gives a similar result.”
+\end{document}
