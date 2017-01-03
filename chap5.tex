@@ -111,7 +111,7 @@ energy deposited in its outer part. The red line illustrates the applied cut.}
 \end{figure}
 
 In the CC, the mean number of photo-electrons\footnote{Photo-electrons are 
-electrons produced in the front window of the Photo-Multiplier Tube (PMT) by a single photon.} from a high energy electron is expected to be around 10.
+electrons produced in the front window of the Photo-Multiplier Tube (PMT) by the Cerenkov photons.} from a high energy electron is expected to be around 10.
 However, hadrons can generate noise due to $\delta$ electrons produced in 
 the materials of the detector. This signal is expected to be around 
 one to two photo-electrons. Hence, to get rid of $\delta$-electrons, we kept only tracks with more than 2.5~photo-electrons, as depicted in figure \ref{delta}. 
@@ -136,6 +136,13 @@ To identify negatively charged pions, we select negative tracks which didn't ver
 This identification consists mostly of a time of flight (TOF) test. We define 
 the relativistic particles' velocity difference as
 $\Delta \beta = \beta_{measured} - {p \over \sqrt{p^2 + m_\pi^2}}$, which is required to be zero within $\pm 0.03$. Figure \ref{PionTOF} illustrates the effect of this cut. As we noticed there are not much negative kaons or anti-protons, we concluded that their contamination must be small (see section~\ref{SysId} for more detailed study).
+
+The previous analysis from L. El Fassi et al. used $\pm 0.05$ ($\sim 3\sigma$), we decided
+to reduce this number to about $2\sigma$ because of the difference of observables. The 
+color transparency analysis was reconstructing the $\rho^0$ and implemented strong kinematical
+cut that reduced significantly possible contaminations. Our measurement uses all the 
+semi-inclusive production and is therefore more sensitive to contaminations. See next 
+question for profiles.
 
 \begin{figure}[tbp]
 \centering
@@ -173,6 +180,44 @@ numerous kaons and protons should be removed by the following tighter TOF cuts:
   & \Delta \beta &> \max\left(-0.02,{p \over\sqrt{p^2+0.7^2}}\right).
 \end{align}
 \end{subequations}
+
+The much more apparent contamination sources than for negative pions, allow to study 
+the TOF profile much more thoroughly. You can see in figures~\ref{TOF-1}, \ref{TOF-2} and 
+\ref{TOF-3} the $\Delta \beta$ profiles for many momentum slices. In figure~\ref{TOF-1}
+one can see some contamination from lighter leptons ($e+$ and $\mu^+$). These represent
+a very small amount and one can see some justification for the choice of a $\pm 0.03$
+cut as these particles do not appear to be discernable beyond that level. Similarly
+in figure~\ref{TOF-2} one can see the contribution from kaons. The larger contribution
+of this contamination motivated the tightening of the TOF cut on this side, to the limit
+where kaons are a minority in the tail of the pion distribution. Finally a similar 
+method is applied for the even larger proton contamination as shown in figure \ref{TOF-3}.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
+\caption {$\Delta \beta$ of positively charged particles for low momentum slices 
+(GeV/c). The red lines shows the applied cuts to select positive pions. The bumps on the right
+correspond to muon and electron masses.}
+\label{TOF-1}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
+\caption {$\Delta \beta$ of positively charged particles for medium momentum slices 
+(GeV/c). The red lines shows the applied cuts to select positive pions. The bump on the left
+correspond to the kaon mass.}
+\label{TOF-2}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
+\caption {$\Delta \beta$ of positively charged particles for low momentum slices 
+(GeV/c). The red lines shows the applied cuts to select positive pions. The bump on the left
+correspond to the proton mass.}
+\label{TOF-3}
+\end{figure}
 
 These cuts permit to minimize the kaon contamination, below 2.5~GeV/c, and the 
 proton contamination for all momenta. The kaon contribution cannot be avoided, however, it should remain small ($\sim$ 3\% according to simulation) 
