@@ -257,7 +257,14 @@ determine the origin of our final-state particles. As illustrated in figure~\ref
   \label{tab:vertex}
 \end{table}
 
-The position of our targets could also vary from a run to another, but this did not happen too often in this experiment. Indeed, except for aluminum, other targets remained in the same position within one or two millimeters. All targets' positions, in CLAS coordinates, are given in table \ref{tab:targets}.
+The position of our targets could also vary from a run to another, but this was not significant in this experiment. Indeed, except for aluminum, other targets remained in the same position within one or two millimeters. All targets' positions, in CLAS coordinates, are given in table \ref{tab:targets}. 
+We show in figures \ref{VertexSolid} and \ref{VertexLiquid} the evolution 
+of the position of the targets with run number. The data where the aluminum
+target is off by 1 cm has been excluded from the analysis. Other variations
+appear to be of a mm or less, while the gap between the solid and liquid target
+is about 5 cm. They should therefore have negligible contribution to the 
+error on acceptance corrections in regard to the error budget already associated
+to the procedure.
 
 \begin{table}[p]
   \centering
@@ -273,16 +280,39 @@ The position of our targets could also vary from a run to another, but this did 
   \label{tab:targets}
 \end{table}
 
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=7.5cm] {answer-fig/VertexC.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexAl.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexFe.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexSn.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexPb.png} 
+\caption {Vertex origin along $z$ (in cm) of electrons as a function of run 
+number for the different solid targets.}
+\label{VertexSolid}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=7.5cm] {answer-fig/VertexDeutC.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexDeutFe.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexDeutSn.png} 
+\includegraphics[width=7.5cm] {answer-fig/VertexDeutPb.png} 
+\caption {Vertex origin along $z$ (in cm) of electrons as a function of run 
+number for the deuterium target in different solid targets configurations.}
+\label{VertexLiquid}
+\end{figure}
+
+The detected electrons are associated with the solid target if their vertex 
+position is less than 1.5~cm ($\sim$3~$\sigma$) from the values shown on table 
+\ref{tab:targets}. For the liquid target, the cut is a bit larger, 2 cm, in order to count for the cryogenic target's size (see figure \ref{vertex}). The pions' vertex was checked against the electron one and was imposed to satisfy this additional condition $| Vz^{e^-} - Vz^{\pi} | < 3$ cm (see figure \ref{fig:dvzpi}).
+
 \begin{figure}[p]
 \centering
 \includegraphics[width=10cm] {chap5-fig/Vertex_el_data.png}
 \caption {Sector-by-sector electrons' vertex distributions. The latter are reconstructed along the beam direction and relative to the center of CLAS located at 0~cm. The red lines show the applied cuts to select the two targets.}
 \label{vertex}
 \end{figure}
-
-The detected electrons are associated with the solid target if their vertex 
-position is less than 1.5~cm ($\sim$3~$\sigma$) from the values shown on table 
-\ref{tab:targets}. For the liquid target, the cut is a bit larger, 2 cm, in order to count for the cryogenic target's size (see figure \ref{vertex}). The pions' vertex was checked against the electron one and was imposed to satisfy this additional condition $| Vz^{e^-} - Vz^{\pi} | < 3$ cm (see figure \ref{fig:dvzpi}).
 
 \begin{figure}[tbp]
 \centering
