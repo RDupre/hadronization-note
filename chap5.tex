@@ -324,8 +324,8 @@ position is less than 1.5~cm ($\sim$3~$\sigma$) from the values shown on table
 \subsubsection{Data Quality}
 
 To check the quality of the runs\footnote{Runs were formed roughly from two hours
-of data, but they were much smaller in case of problems.}, we monitored the ratio of scattered electrons yields obtained from solid and liquid targets. In case of the beam hitting other materials in the beam-line or any detector is not working 
-properly, this ratio will be off and indicates problematic runs. A figure 
+of data, but they were much smaller in case of problems.}, we monitored the ratio of scattered electrons yields obtained from solid and liquid targets. In case of the beam hitting other materials in the beam-line or of ony other problem that would affect our final result, 
+this ratio will be off and indicate the problematic runs. A figure 
 \ref{DataQ} shows electrons yields' ratios for different nuclear target; we fitted these ratios to extract the mean value for each target, then we discarded runs that were 5~$\sigma$ away from the appropriate mean. Must note that these ratios were consistent with our target's thicknesses given in \cite{Hakobyan:2008zz} except for a carbon target. For that reason, the density of the latter was recently remeasured, and its new value was finally matching our data\footnote{i.e. (1.747+/-0.0007)g/cm$^3$ instead of 2.235 g/cm$^3$}.
 
 \begin{figure}[tbp]
@@ -339,7 +339,20 @@ properly, this ratio will be off and indicates problematic runs. A figure
 \label{sec:obs}
 
 Since we are interested in deep inelastic scattering, we use the following 
-cuts: $Q^2 > 1$~GeV$^2$/c$^2$ and $W > 2$~GeV. We also apply a cut on the energy transferred fraction, $y = \nu/E_{beam} < 0.85$. This cut aims to remove the low energy electrons that are significantly affected by radiative effects and sat at the limit of our trigger threshold.
+cuts: $Q^2 > 1$~GeV$^2$/c$^2$ and $W > 2$~GeV/c$^2$, with the inclusive distributions
+after these cuts shown in figure \ref{DISKine}.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=5cm] {answer-fig/DIS-Q2.png} 
+\includegraphics[width=5cm] {answer-fig/DIS-w.png} 
+\includegraphics[width=5cm] {answer-fig/DIS-y.png} 
+\caption {Inclusive distributions after DIS selection cuts for a sample of the iron
+data.}
+\label{DISKine}
+\end{figure}
+
+We also apply a cut on the energy transferred fraction, $y = \nu/E_{beam} < 0.85$. This cut aims to remove the low energy electrons that are significantly affected by radiative effects and sat at the limit of our trigger threshold.
 
 \subsubsection{Method}
 \label{RatioCalc}

@@ -196,7 +196,7 @@ P17, Fig 12 - what solid target is shown?  Are the shifts the same for electrons
 {\it Sadly, this cannot be checked, the kumac used for this figure specify a file name that
 do not exist anymore (codes and files have been moved at some point and non essential files
 have been removed in the process). It is always possible to reproduce the figure with a root 
-file if the reviewer feel it is necessary. 
+routine if the reviewer feel it is necessary. 
 
 We provide here figure \ref{VertexEl} to better illustrate the result and figure 
 \ref{VertexPip} to show that the pions behave similarly.}\\
@@ -224,28 +224,51 @@ these should be relatively stable.  Why do you not determine run quality by look
 event rate per coulomb of beam current?  For this quantity, a change in the detector 
 operation will show up.
 
+{\it You are right, the motivation for this cut is not stated properly. We are looking 
+at the ratio because it would affect our result, while ignoring issues that would not
+affect our observable. It is important to note that the initial run list was already
+cleaned from known detector failures. (The text is corrected in the note.) }
 
 
 8.
 P19, FIg. 14- Hard to tell how much data was discarded.  Maybe give a table of means and 
 sigmas for each target or show the cuts on the figure are horizontal lines.
 
-
+{\it The quantity of data removed is difficult to assess, since the problematic runs were
+not passed through the final analysis. We were unable to recover the orginal values of the
+fits for these specific figures and we 
+lack the problematic run which have been deleted. At this stage, we do not deem necessary
+to pull these old discarded data and reactivate the associated codes. If the reviewer
+think it is necessary, it is time consuming but of course possible.}
 
 9.
 P19 - If you use "c" constant in dimensions of Q2, then use it for W as well.
 
-
+{\it Corrected.} \\
 
 10.
 P19, Sec. 2.3 - Show plots of Q$^2$, W and y with the cuts.
 
+{\it Figures \ref{DISKine} illustrates the request and have been added to the note.} \\
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=5cm] {answer-fig/DIS-Q2.png} 
+\includegraphics[width=5cm] {answer-fig/DIS-w.png} 
+\includegraphics[width=5cm] {answer-fig/DIS-y.png} 
+\caption {Inclusive distributions after DIS selection cuts for a sample of the iron
+data.}
+\label{DISKine}
+\end{figure}
 
 
 11.
 P19, eq. 7 - Is it really just the sum of weights or are they the counts multiplied by the 
 weights?
 
+{\it They are indeed the counts multiplied by the weights, which is mathematically equivalent.
+The sum indicated runs over all the recorded events, it is not associated to the weights
+bins or anything like that. To be implemented!!!!} \\
 
 
 12.
