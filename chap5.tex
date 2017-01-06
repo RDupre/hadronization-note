@@ -368,12 +368,12 @@ and
  + \left ({\langle P_\perp^4 \rangle - \langle P_\perp^2 \rangle ^2}\right )_D / N_D^h.
 \end{equation}
 
-However, the implementation of acceptance and radiative corrections is done through some given weights to each event based on its kinematics. The multiplicity ratio then becomes
+However, the implementation of acceptance and radiative corrections is done through weights associated to each event based on its kinematics. The multiplicity ratio then becomes
 \begin{equation}
 R_A^h (Q^2,\nu,z_h,P_\perp^2) = {{\sum \omega_A^h (Q^2,\nu,z_h,P_\perp^2) / \sum \omega_A^e (Q^2,\nu)} 
                        \over {\sum \omega_D^h (Q^2,\nu,z_h,P_\perp^2) / \sum \omega_D^e (Q^2,\nu)}},
 \end{equation}
-where $\omega$ is the weight associated with the event, and the sums run over all measured particles. The expression of the transverse momentum broadening remains as
+where the sums run over all the events and $\omega$ is the weight associated with the event. The expression of the transverse momentum broadening remains as
 \begin{equation}
 \Delta \langle P_\perp^2 \rangle = \langle P_\perp^2 \rangle_A - \langle P_\perp^2 \rangle_D,
 \end{equation}
@@ -382,7 +382,7 @@ but with
 \langle P_\perp^2 \rangle = {\sum \left ( P_\perp^2 \times \omega (Q^2,\nu,z_h,P_\perp^2) \right ) \over \sum \omega (Q^2,\nu,z_h,P_\perp^2)}.
 \end{equation}
 
-Thus, new expressions of the weighted statistical uncertainties are: 
+Thus, new expressions of the weighted statistical uncertainties are derived: 
 \begin{equation}
 {\delta \left ( R_A^h \right ) \over R_A^h} = 
       \sqrt{ \left ( {\sum {\omega^h_A}^2 \over \left (\sum \omega^h_A \right )^2} \right ) 
@@ -508,9 +508,21 @@ The acceptance correction coefficients are defined as the ratio of reconstructed
 \text{Acc} = {N_{rec} \over N_{gen}}.
 \end{equation}
 
-Experimental data were corrected using the weights defined as $\omega = 1/\text{Acc}$. These coefficients are calculated in many bins, in order to be independent of the imperfections of our event generator. However, an excess of bins could lead to a strong bin migration\footnote{Fraction of events not reconstructed in the bin they were produced in.}, which might introduce a bias in case it becomes quite large.
+Experimental data were corrected using the weights defined as $\omega = 1/\text{Acc}$. These 
+coefficients are calculated in many bins, in order to be independent of the imperfections of 
+our event generator. However, an excess of bins could lead to a large bin 
+migration\footnote{Fraction of events not reconstructed in the bin they were produced in.}, 
+which introduces a bias in the evaluation of acceptance. Bin sizes are therefore chosen to
+be larger than the resolution associated to each kinematic variable.
 
-We used a 4-dimensional binning to divide the large phase space of our two particles' final state. However, to evaluate the associated systematic errors with this correction, we used the two different binning presented in table~\ref{tab:AcceptBinning}. The total number of bins is constrained by the amount of generated data, and must be maintained reasonably low in order to keep a good statistical precision and a manageable bin migration.
+We used a 4-dimensional binning to divide the large phase space of our two particles' final 
+state. To evaluate systematic errors associated with this correction, we compared the
+method using two different sets of kinematic variables, as presented in 
+table~\ref{tab:AcceptBinning}. The first set of variables is the one actually used for the
+analysis and the second set is only used to evaluate the systematic errors, so in the 
+following, the formulas are given only for the first set. The total number of bins is 
+constrained by the amount of generated data and must be maintained reasonably low in order 
+to keep a good statistical precision and a small bin migration.
 
 \begin{table}[htbp]
   \centering
@@ -549,12 +561,12 @@ We used a 4-dimensional binning to divide the large phase space of our two parti
   \label{tab:AcceptBinning}
 \end{table}
 
-The weights ($\omega_{\pi^\pm}(\nu,x_{Bj},p_h,t)$) are then extracted from 
-the simulation using equation \ref{eq:acc}. However, it turned out that these coefficients should not be applied to data before resolving the issue of the problematic bins that have either
+The weights ($\omega_{\pi^\pm}(\nu,x_{Bj},p_h,t)$) are extracted from 
+the simulation using equation \ref{eq:acc}. However, these coefficients should not be applied to data before resolving the issues with bins that have either
 \begin{itemize}
  \item too large weight values, i.e., very small acceptance, or
- \item very few reconstructed events leading to large statistical errors, or
- \item a large fraction of events originally generated in an other bin (bin migration issue).
+ \item very few reconstructed events and very large statistical errors, or
+ \item a large fraction of events originally generated in another bin (bin migration issue).
 \end{itemize}
 To eliminate these bins we apply the following cuts:
 \begin{equation} \label{eq:AccL1}
@@ -565,12 +577,29 @@ and
 N_{rec} > 4,
 \end{equation}
 where $\delta \omega / \omega$ is the relative error on the weight, and $R_c$ is the 
-proportion of reconstructed events initially generated in an other kinematical bin. Figure \ref{fig:AccCoef} shows $\omega$ distributions after applying these cuts. Around 900 bins remain for both targets, but we noticed that these weights are much larger for $\pi^-$ compared to $\pi^+$, as an indication of a larger correction for the inbent particles. In order to maximize the acceptance and reduce the sensitivity to our arbitrary weights' cuts, we corrected the data with an additional two dimensional reweighting factor as:
+proportion of reconstructed events initially generated in an other kinematical bin. 
+Figure~\ref{fig:AccCoef} shows $\omega$ distributions after applying these cuts. Around 
+900 bins remain for both targets, but we noticed that these weights are much larger for 
+$\pi^-$ compared to $\pi^+$, as an indication of a larger correction for the inbent 
+particles. The motivation for using such a cut based on the product of different unrelated
+values is actually directly linked to this problem. The $\pi^-$ acceptance drops very 
+strongly at low \pt leading to very high weights, however there is no problem of bin migration
+or low statistics because the generated yield is very high in this region. We found that 
+the best way
+to keep these bins while discarding bins where the weight might be slightly smaller but which 
+have issues with bin migration and statistics was to apply this set of cuts.
+
+In order to correct for these droped bins and reduce the sensitivity to the arbitrary in
+the choice of the weights' cuts, we corrected the data with an additional two dimensional 
+reweighting factor as:
 \begin{equation}
 \text{Acc}_2(\nu,p_h) = {\sum_{rec} \omega (\nu,x_{Bj},p_h,t)\over N_{gen}(\nu,p_h)}.
 \end{equation}
-where $\omega$ is the previously calculated weight of either one remaining bin or a bin that was excluded by the cuts. One of the criteria for setting the limits in equation \ref{eq:AccL1} and 
-\ref{eq:AccL2} is to keep reweighting factors, $\omega_2 = 1/\text{Acc}_2$, at the level of a few percents.
+where $\omega$ is the previously calculated weight or a 1 for a bin that was excluded by the 
+cuts of equation \ref{eq:AccL1} and \ref{eq:AccL2}. One of the criteria for setting the limits 
+in these equation is in fact to keep this reweighting factors, $\omega_2 = 1/\text{Acc}_2$, at 
+the level of a few percents. This indicates that the previous method only missed a small 
+fraction of the event in the first place and is a good indication of the sanity of the method.
 
 \begin{figure}[tbp]
 \centering

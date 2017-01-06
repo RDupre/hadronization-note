@@ -266,14 +266,26 @@ data.}
 P19, eq. 7 - Is it really just the sum of weights or are they the counts multiplied by the 
 weights?
 
-{\it They are indeed the counts multiplied by the weights, which is mathematically equivalent.
-The sum indicated runs over all the recorded events, it is not associated to the weights
-bins or anything like that. To be implemented!!!!} \\
+{\it They are indeed the counts multiplied by the weights.
+The sum indicated runs over all the recorded events, it is not associated to the weight
+bins or anything like that. We tried to adapt the language in the note to make it clearer.} \\
 
 
 12.
 P23, I’d be very worried about the MC modeling acceptance on falling edges like that at the 
 right of the top right plot.
+
+{\it It is indeed an important issue. A related fact to keep in mind (while it is presented 
+later in the note in 2.5.1) is that the main issue there is the quantity of accidentals. Since
+the cross section get really small in this region, accidentals start to overcome
+the signal. We apply a cut
+$p_\perp^2 < 2.5$ GeV$^2$/c$^2$ to remove these regions. One could advocate to even lower this 
+cut, but it would affect significantly the outcome of the $\Delta P_\perp^2$, 
+because as often with averages the outliers have a strong impact.
+
+On the bright side, the slope and behavior appear to be rather well described by the MC
+simulation. We feel that a good reproduction of the data is an indication that the 
+acceptance correction will behave properly.} \\
 
 
 
@@ -290,17 +302,51 @@ acceptance, i.e., a double counting?  This whole section needs to be reworked.  
 certain that I don’t really understand what you are doing but it leaves me worried that 
 something is amiss.  Anyway, that’s not where you want readers to be.  
 
+{ \it The section has been reworked to clarify what we are doing. Few points you raised 
+are also answered here:
+
+The first set of variables is the one actually used for the
+analysis and the second set is only used to evaluate the systematic errors, so in the 
+note, the formulas are given only for the first set.
+
+The motivation for using such a weight cut based on the product of different unrelated
+values is actually directly linked to the inbent 
+particles being directed in the beam pipe. The $\pi^-$ acceptance drops very 
+strongly at low $p_\perp^2$ leading to very high weights, however there is no problem of 
+bin migration
+or low statistics because the generated yield is very high in this region. We found that 
+the best way
+to keep these bins while discarding bins where the weight might be slightly smaller but with 
+issues concerning bin migration and statistics was to apply this type of cut.
+
+In term of method, the two
+step acceptance correction is hopefully going to be clearer. It is the same as the method used 
+in the previous L. El Fassi et al. analysis note. The second step of the procedure is
+specifically used to take care of the holes in the acceptance (note, they are not really 
+holes because problematic bins are generally on the edges). You can see that the weights
+of the previously calculated acceptance are used in this step, ensuring that we do not
+double correct the data.
+
+The size of the bins is not constant and is indeed increased in region with small event yield.
+However, the multi dimensional binning cannot be fully adapted in a general maner. On this
+topic we added in annex tables indicating the bin limits that we used.} \\
 
 
 14.
 P26, bottom, if you have regions with very low acceptance, should they be cut out?
 
+{\it In the case of the $\Delta P_\perp^2$, we need to measure an average of the
+transverse momentum distribution. Completely cutting a part of the distribution
+would indeed solve the acceptance problem but would make the $\langle p_\perp^2 \rangle$
+measurement meaning less. We therefore have to live with it and do our best to
+reconstruct the whole distribution even if it means having larger error bars.} \\
 
 
 15.
 P26 - "consistent with HERMES results" - could you add HERMES points to the plot with 
 your data points to show what you mean as consistent?
 
+{\it To look at } \\
 
 
 16.
@@ -308,11 +354,13 @@ P27 fig.22-
  It's unclear to which point the error bar is associated. I think the common 
 practice is to slightly shift markers horizontally.
 
-
+{\it Sorry, we overlooked this for these intermediary plots. TO BE CORRECTED} \\
 
 17.
 P27, Fig. 22 - the right column of plots is not the same as those in Fig. 15.  Why change the 
 variables?
+
+{\it Sorry, it is a mistake on our part, there is absolutely no reason. TO BE CORRECTED} \\
 
 
 
@@ -344,6 +392,8 @@ P33, Sec. 2.5.1 - list the negligible effects.
 22.
 P34, Fig. 28 - why is the resolution poorer than in Fig. 12?
 
+{\it Resolution is the same, it looks wider because on this figure, we show the integrated 
+result over the 6 sectors. } \\
 
 
 23.
@@ -389,7 +439,7 @@ P36, top paragraph, “that a factorization holds” means what??  Should explai
 
 
 29.
-P36 top of section 3.1.1, 5% versus 5% looks more like 1 sigma rather than the 1.5 sigma 
+P36 top of section 3.1.1, 5\% versus 5\% looks more like 1 sigma rather than the 1.5 sigma 
 you say in the text.
 
 
