@@ -518,7 +518,7 @@ be larger than the resolution associated to each kinematic variable.
 We used a 4-dimensional binning to divide the large phase space of our two particles' final 
 state. To evaluate systematic errors associated with this correction, we compared the
 method using two different sets of kinematic variables, as presented in 
-table~\ref{tab:AcceptBinning}. The first set of variables is the one actually used for the
+table~\ref{tab:AcceptBinning} and \ref{tab:AcceptBins}. The first set of variables is the one actually used for the
 analysis and the second set is only used to evaluate the systematic errors, so in the 
 following, the formulas are given only for the first set. The total number of bins is 
 constrained by the amount of generated data and must be maintained reasonably low in order 
@@ -559,6 +559,37 @@ to keep a good statistical precision and a small bin migration.
    shows the variables used on this correction, and the right panel contains the 
    variables used on the evaluation of the related systematic uncertainties.}
   \label{tab:AcceptBinning}
+\end{table}
+
+\begin{table}[htbp]
+\center
+\begin{tabular} {|l|c|c|c|c|}
+\hline
+ $\nu$ & \xb & $p_\pi$ & $-t$ \\ \hline
+ 2.20 & 0.12 & 0.25 &-3.50 \\ 
+ 3.00 & 0.18 & 0.60 &-2.10 \\ 
+ 3.40 & 0.22 & 1.00 &-1.75 \\ 
+ 3.75 & 0.27 & 1.45 &-1.50 \\ 
+ 4.00 & 0.33 & 1.70 &-1.30 \\ 
+ 4.25 & 0.60 & 2.15 &-1.10 \\ 
+      &      & 3.00 &-0.75 \\ 
+      &      & 4.25 &-0.00 \\ \hline
+\end{tabular}
+\quad
+\begin{tabular} {|l|c|c|c|c|}
+\hline
+ $Q^2$ & $\nu$ & $z$ & $-t$ \\ \hline
+ 1.00 & 2.20 & 0.00 & -3.50 \\
+ 1.20 & 3.00 & 0.20 & -2.10 \\
+ 1.40 & 3.40 & 0.40 & -1.75 \\
+ 1.65 & 3.75 & 0.45 & -1.50 \\
+ 2.10 & 4.00 & 0.52 & -1.30 \\
+ 4.00 & 4.25 & 0.62 & -1.10 \\
+      &      & 0.80 & -0.75 \\
+      &      & 1.00 & -0.00 \\ \hline
+\end{tabular}
+\caption{Bin limits used for the acceptance correction described in table \ref{tab:AcceptBinning}.}
+  \label{tab:AcceptBins}
 \end{table}
 
 The weights ($\omega_{\pi^\pm}(\nu,x_{Bj},p_h,t)$) are extracted from 
@@ -625,8 +656,9 @@ for multiplicity ratios (top) and transverse momentum broadening
 Figure \ref{fig:AcceptPlots}, where only statistical errors are 
 represented, shows the new results after applying the acceptance correction.
 The acceptance correction effects appear to be in the order of $10$\% for 
-multiplicity ratios and $30$\% for the transverse momentum broadening. This is a surprisingly significant correction with regard to a few centimeters separating the two targets. The reason for such a large correction is that the small shift in the $z$-vertex position changes slightly the minimum angle of the detector in the region where most hadron production is concentrated, {\it i.e.} at low \pt close to the beam line. The $\pi^-$s were more affected due to the inbending magnetic field. Indeed, the low \pt $\pi^-$s had very low acceptance which led to large correction factors. The large spread in weights makes the errors on \dpt very large, and the related results difficult to exploit. However, our transverse momentum broadening results of both pions matched each other after this correction, which is consistent 
-with HERMES results.
+multiplicity ratios and $30$\% for the transverse momentum broadening. This is a surprisingly significant correction with regard to a few centimeters separating the two targets. The reason for such a large correction is that the small shift in the $z$-vertex position changes slightly the minimum angle of the detector in the region where most hadron production is concentrated, {\it i.e.} at low \pt close to the beam line. The $\pi^-$s were more affected due to the inbending magnetic field. Indeed, the low \pt $\pi^-$s had very low acceptance which led to large correction factors. The large spread in weights makes the errors on \dpt very large, and the related results difficult to exploit. However, our transverse momentum broadening 
+results of both pions matched each other after this correction, which is similar 
+to the HERMES results (see figure~\ref{fig:her3}).
 
 \subsubsection{Coulomb Correction}
 \label{CCor}
@@ -710,10 +742,18 @@ the second version of the note as we do not want to delay the review process bec
 
 \subsubsection{Isospin Correction}
 
-The important excess of neutrons in heavy nuclei leads to a modification of both $\pi$ multiplicities on DIS events. Using Hall~C results 
-\cite{Asaturyan:2011mq}, shown in figure \ref{fig:IsoSpin}, we evaluated the correction factors for this effect. Our simple estimation is solely based on 
-proton and neutron numbers that gave $\pi^+$s results shown in table~\ref{tab:isospin}. As the effect on $\pi^-$s was found to be consistent with zero, no correction was applied to their multiplicity ratios. 
-We attribute a 10\% normalization error to the effect of the isospin correction on our results. It is relatively chosen based on the precision of the Hall~C measurement, and the limited phase space coverage of Hall-C data compared to ours.
+The important excess of neutrons in heavy nuclei leads to a modification of 
+both $\pi$ multiplicities regardless of nuclear effects. Using Hall~C results 
+\cite{Asaturyan:2011mq}, shown in figure \ref{fig:IsoSpin}, we evaluated the 
+correction factors for the imbalance of u/d quarks in heavy nuclei compared
+to deuterium. Our simple estimation is solely based on proton and neutron 
+numbers and assumes that this isospin correction does not depend on any
+kinematic variable. We found that multiplicity ratios of $\pi^+$ need small
+corrections, shown in table~\ref{tab:isospin}. The effect on $\pi^-$s was 
+found to be consistent with zero, so no correction was applied to their 
+multiplicity ratios. We attribute a normalization error to the finale results
+equal to 10\% of the isospin correction. This is evaluated based on the 
+precision of the Hall~C measurement.
 
 \begin{figure}[tbp]
 \centering
@@ -741,18 +781,22 @@ as a function of \xb at $z=0.55$ \cite{Asaturyan:2011mq}.}
   \label{tab:isospin}
 \end{table}
 
-It is important to mention that the isospin correction is applied only to rates, which means applied only to $\pi^+$s multiplicity ratios. The transverse momentum broadening could, in principle, be affected, however, the results from \cite{Asaturyan:2011mq} showed no isospin effects in \ptp. Therefore, we are confident that our \dpt results should not be sensitive to any isospin effects.
+It is important to mention that the isospin correction is only relevant to 
+rate measurements. The transverse momentum broadening could, in principle, 
+be affected, however, the results from \cite{Asaturyan:2011mq} showed no 
+isospin effects in \ptp. Therefore, we are confident that our \dpt results 
+should not be sensitive to any isospin effects.
 
-We finally note that the $A$ dependence of multiplicity ratios of both charged pions became parallel after the isospin correction\footnote{Within 
+We finally note that the $A$ dependence of multiplicity ratios of both 
+charged pions became parallel after the isospin correction\footnote{Within 
 normalization errors presented in section \ref{sec:TotSys}} (see figure 
 \ref{fig:IsoPlot}). Considering previous measurements and existing models, 
-this result was expected and demonstrated the importance of this correction.
+this result was expected and demonstrates the importance of this correction.
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=8cm] {chap5-fig/c_RvA.png}
-\caption {Multiplicity ratios as a function of $A^{1/3}$ 
-with only the isospin correction applied.}
+\includegraphics[width=8.5cm] {chap5-fig/c_RvA.png}
+\caption {Multiplicity ratios as a function of $A^{1/3}$ with the isospin correction applied.}
 \label{fig:IsoPlot}
 \end{figure}
 
@@ -771,28 +815,75 @@ to evaluate the systematic errors correlated with:
 
   - particles' misidentification,
 
-  - particles' re-scattering in different detectors,
+  - particles' scattering in different detectors,
 
   - particles' energy loss.\\
 
 
-To evaluate those errors, we are comparing the kinematics of reconstructed particles with the generated ones. Each reconstructed particle is associated with its generated parent if both particles have a similar momentum and angle coverage. However, the precision of the measured kinematical distribution $\Delta p$, $\Delta \theta$ and $\Delta \phi$ were determined as $\Delta x = {\sum_n |x_{gen} - x_{rec}| \over n}$, where $n$ is the kinematical bin number. Using the same simulation as for the acceptance, we found ${\delta p \over p } = 0.03$, $\delta \theta = 3$ mrad and $\delta \phi = 10$~mrad. Nevertheless of being much larger than the nominal CLAS resolutions published in \cite{Mecking:2003zu}, they are still reasonable for our measurement. Although, we evaluated the systematic errors associated with other variables\footnote{These values were evaluated for a typical kinematics range. However, the results can be much larger at extreme kinematics (large \pt or Q$^2$).}, such as $\delta Q^2 \sim 0.013$ GeV$^2$/c$^2$, $\delta z \sim 0.4 \%$, and $\delta P_\perp^2 \sim 0.004$ GeV$^2$/c$^2$. These errors are overall negligible since they are several times smaller than our usual bin sizes (see figures in a section \ref{prelim}). 
+To evaluate these errors, we are comparing the kinematics of reconstructed 
+particles with the generated ones. Each reconstructed particle is associated 
+with its generated parent if both particles have a similar momentum and 
+angle. The precision of the measured kinematical distribution 
+$\Delta p$, $\Delta \theta$ and $\Delta \phi$ were determined as $\Delta x = 
+{\sum_n |x_{gen} - x_{rec}| \over n}$. Using the same simulation as for 
+the acceptance, we found 
+${\delta p \over p } = 0.03$, $\delta \theta = 3$ mrad and $\delta \phi = 
+10$~mrad. While being larger than the nominal CLAS resolutions published in 
+\cite{Mecking:2003zu}, they are still reasonable for our measurement. We also 
+evaluated these errors in term of other variables, such as 
+$\delta Q^2 \sim 0.013$ GeV$^2$/c$^2$, $\delta z \sim 0.4 \%$ and $\delta 
+P_\perp^2 \sim 0.004$ GeV$^2$/c$^2$ (\footnote{These values are evaluated for 
+a typical kinematics range. The results can be larger at extreme kinematics 
+(large \pt or Q$^2$).}). These errors are overall negligible since they are 
+several times smaller than our usual bin sizes (see figures in a section 
+\ref{prelim}). 
 
-We also evaluated the particles' misidentification and the re-scattering effect in different detectors or coils. The misidentification usually leads to a high 
-contamination on the kinematical distributions tails, which is manifested most in our case on the tail of the \pt distribution. This effect is due to a low probability to produce high \pt events, therefore the contribution from the accidental background is relatively increased. As a consequence, we used the following cut $p_\perp^2 < 2.5$~GeV$^2$/c$^2$, which basically discarded only a very little amount of data (about one $\pi$ from 30000 pions). The misidentification of electrons was found to be too small in the order of $1\,e^-$ each 1000 events, hence does not contribute significantly to this uncertainty. For pions, the main contamination comes from kaons with momenta above 2~GeV/c ($\sim$ 3\% for $\pi^+$s and $\sim$ 0.5\% for $\pi^-$s). Protons also contaminates a $\pi^+$ sample at high momenta (up to a few \%). 
-%TODO Justify the pt cut with a figure?
+We also evaluated the particles' misidentification and scattering on materials
+from the detectors or coils. For this study, we are looking at reconstructed 
+particles that do not have a clear parent (either because they are misidentified
+or because they scattered and their kinematic changed significantly). The 
+misidentification of electrons was found to be small, of the order of 1 in 
+1000 $e^-$ in all the kinematic space, hence this issue does not contribute 
+significantly to this uncertainty. We found however for pions
+a high proportion of accidental events on the kinematical distributions tails, 
+in particular of the \pt distribution. This effect is due to the low 
+probability to produce high \pt events, leading to an increased relative 
+contribution from the accidental background. As a consequence, we used the 
+following cut $p_\perp^2 < 2.5$~GeV$^2$/c$^2$, which discards only a very 
+little amount of data (about 1 in 30000 $\pi$). On the contamination side,
+most events come from kaons with momenta above 2~GeV/c ($\sim$ 3\% for 
+$\pi^+$s and $\sim$ 0.5\% for $\pi^-$s). Protons also contaminate the 
+$\pi^+$ sample but only for the highest momenta (up to a few \%). 
 
-In conclusion, the uncertainty related to particles' misidentification is taken into account in the point-to-point systematic errors by assuming a 100\% contamination level. Other effects were found negligible.
+In conclusion, the uncertainty related to particles' misidentification is 
+taken into account with the attribution of a point-to-point systematic 
+error equal to 100\% of the contamination level. The accidentals are taken 
+care of using a cut on the high \pt distribution. Finally, resolution effects
+were found to be negligible.
 
 \subsubsection{Target Reconstruction}
 
-Because of some reconstruction errors or a re-scattering on detectors' materials, it 
+Because of reconstruction errors or scattering on detectors' material, it 
 is possible to associate a particle with the wrong target. To estimate this 
-effect, we looked, in the experimental data, at the number of reconstructed events upstream and downstream our targets, where nothing should be detected. Thus, we defined two test regions (see figure \ref{fig:targetleak}) to evaluate a targets' contamination. The upstream region, named as a test region 1, was given the size of the solid target's selection cut to evaluate the contamination from the liquid target. However, the downstream region, named as a test region 2, covered the same size of the liquid target's selection cut to estimate the leak from the solid target. The distance between detection and test regions is identical to the 
-distance between the two targets' detection regions. 
+effect, we looked, in the experimental data, at the number of reconstructed 
+events upstream and downstream of our targets, where nothing should be 
+detected. Thus, we defined two test regions (see figure \ref{fig:targetleak}) 
+to evaluate the associated contamination between the targets. The upstream 
+region, named test region 1, is of the size of the solid target's selection 
+cut to evaluate the contamination from the liquid target. The downstream region, 
+named test region 2, covers the same size of the liquid target's selection cut 
+to estimate the leak from the solid target. The distance between detection and 
+test regions is identical to the distance between the two targets' detection 
+regions. 
 
 We found that the number of electrons in the test region 1 and 2 represents, 
-respectively, 1 and 2\% of the total number of events. However, in the case of semi-inclusive measurements, where we request two particles in the final state, this number drastically dropped, and became in the order of 0.01\%. In conclusion, only the number of electrons is significantly affected by a target's contamination issue, which leads to a normalization error of 1\% in all multiplicity ratios.
+respectively, 1 and 2\% of the total number of events. However, in the case 
+of semi-inclusive measurements, where we request two particles coming from the
+same spot in the final state, this number drastically dropped to $\sim$0.01\%. 
+Therefore, only the number of electrons is significantly affected by the 
+target's contamination issue, which is an issue only for multiplicity ratios.
+We associate a normalization error of 1\% to all multiplicity ratios to account
+with this issue.
 
 \begin{figure}[tbp]
 \centering
