@@ -8,9 +8,19 @@ experiments E-02-104 \cite{Brooks:2002aa} and E-02-110 \cite{Hafidi:2002aa}.
 The run period, named {\it eg2}, was composed of three phases 
 labeled {\it a}, {\it b} and {\it c}. The analysis is performed on the data 
 collected in the beginning of 2004 during the third phase ({\it eg2c}), for 
-which the beam energy was 5.014~GeV\footnote{The other phases of the run gave only small amounts of data at beam energies of 4 and 4.7~GeV. Thus, we decided to not use them in this analysis.}.
+which the beam energy was 5.014~GeV\footnote{The other phases of the run 
+gave only small amounts of data at beam energies of 4 and 4.7~GeV. Thus, we 
+decided to not use them in this analysis.}.
 
-As the two married experiments aimed at comparing deuterium with heavy nuclei, it was decided to use a double target system~\cite{Hakobyan:2008zz}. The first target was filled with a liquid deuterium, and the second was a solid target. The latter was made of either carbon, aluminum, iron, tin or lead, and was changed remotely (see figure~\ref{fig:phototarget}). The two targets were separated by only 4~cm in order to minimize the difference on CLAS acceptance between them. The advantage of having two targets mounted simultaneously on the beam line is that several systematic effects related to the beam and detector's properties will cancel in the nuclear ratio.
+As the two experiments aimed at comparing deuterium with heavy nuclei, it was 
+decided to use a double target system~\cite{Hakobyan:2008zz}. The first target 
+was filled with liquid deuterium, and the second was a solid target. The 
+latter was made of either carbon, aluminum, iron, tin or lead, and was changed 
+remotely (see figure~\ref{fig:phototarget}). The two targets were separated by 
+only 4~cm in order to minimize the difference on CLAS acceptance between them. 
+The advantage of having two targets mounted simultaneously on the beam line is 
+that several systematic effects related to the beam and detector properties 
+cancel in the nuclear ratio.
 
 \begin{figure}[htbp]
 \centering
@@ -25,15 +35,21 @@ transparency effects, has been approved and published~\cite{ElFassi:2008}. As th
 analysis went through a careful review by the CLAS collaboration, we have adapted similar analysis methods as much as possible. In particular, the electron selection 
 presented here is very similar to theirs; the main difference being a new 
 target determination method. The pion identification cuts are, however, tightened
-in this analysis as we have less constraints on the kinematics to exclude any possible pions' contamination.
+in this analysis as we have less constraints on the kinematics to exclude any possible pion contamination.
 
 In the section \ref{sec:pid}, we identify the following particles, e$^-$, 
-$\pi^-$ and $\pi^+$ using a series of cuts on various detector outputs. For pions, we require a positive status of drift chambers (DC) and scintillator counters (SC) local signals, in addition to the global status reconstructed with the time-based tracking correction. For electron identification, we use good signals from 
-all detectors, DC, Cherenkov Counters (CC), SC and the Electromagnetic 
+$\pi^-$ and $\pi^+$ using a series of cuts on various detector outputs. For pions, we require a signal in the drift chambers (DC) and scintillator counters (SC) in 
+addition to the successful reconstruction of the time-based tracking. For electron 
+identification, we use the same standards but requesting a good signal from 
+all detectors, DC, Cherenkov Counters (CC), SC and Electromagnetic 
 Calorimeter (EC).
 
-Once all particles are identified, we extract our two observables, multiplicity 
-ratios and the transverse momentum broadening. Their derivation method is presented in the section \ref{sec:obs}, while a list of our corrections is summarized in the section \ref{sec:corrections}. The budget of our systematical uncertainties is detailed in the section \ref{sec:TotSys}, and the final analysis results are presented and discussed in the next chapter.
+Once all particles are identified, we extract our two observables, 
+multiplicity ratios and the transverse momentum broadening. The derivation 
+of these quantities is presented in section \ref{sec:obs}, while a list of 
+corrections  is summarized in section \ref{sec:corrections}. The systematic 
+uncertainty budget is detailed in section \ref{sec:TotSys}, and the final 
+analysis results are presented and discussed in the next chapter.
 
 \subsection{Particle Identification}
 \label{sec:pid}
@@ -53,8 +69,8 @@ To reject pions, we apply a momentum-dependent cut of the energy deposited in th
 \end{equation}
 
 where $\mu = 0.271$ is the mean of the total energy fraction deposited in the 
-calorimeter, the parameter $a$ is set to 0.5, and the parameter 
-$b$ varies with momenta, as shown in table \ref{tab:ecoutin-par}. The derivation of $b$ was motivated by the non-linear momentum dependence of the energy 
+calorimeter, the parameter $a$ is set to 0.5 and the parameter 
+$b$ varies with momentum, as shown in table \ref{tab:ecoutin-par}. The derivation of $b$ was motivated by the non-linear momentum dependence of the energy 
 deposited on both EC regions (see figure \ref{eleEC}). As pions are 
 minimum ionizing particles, they are expected to loose a constant energy in 
 the inner part of the calorimeter (around 30~MeV), regardless of their 
@@ -896,7 +912,28 @@ another.}
 
 \subsubsection{Acceptance}
 
-After testing several different acceptance correction methods, we finally converged with the one using the two different binning presented on a table \ref{tab:AcceptBinning}. The difference between these methods gave us an idea about the systematic error associated with this correction. Using our results on iron, we found the relative uncertainties presented in a table~\ref{tab:SysAcc}. We noticed the significantly large errors for $\pi^-$s, which were expected, due to their low acceptance and larger weights. Although, systematical errors are considerably large on \dpt measurements. This is mainly due to the nature of the \dpt observable; as a difference, it would indeed enhance relative errors significantly. As it was shown in figure~\ref{fig:AcceptPlots}, error bars became much larger for the corrected \dpt from the acceptance effect. This fact indicated an important statistical sensitivity introduced by our weighting methods. The errors on \dpt are of the same order, or smaller, than the differences observed between the two weighted data-sets. This is an indication that the uncertainties reported in table \ref{tab:SysAcc} are, in nature, similar to the statistical errors, in the sense that both originate from the large variation between event-by-event weights. For this reason, we decided to do not include this error in our systematic budget to avoid double counting this effect.
+After testing several different acceptance correction methods, we finally 
+converged with the one using four dimensions and a limited number of bins.
+The two different approaches to binning the data presented on a table 
+\ref{tab:AcceptBinning} are used to evaluate the systematic errors. The 
+difference between these two methods on iron data are used to evaluate 
+the relative uncertainties presented in a table~\ref{tab:SysAcc}. We noticed 
+the significantly large errors for $\pi^-$s, which were expected, due to their 
+lower acceptance and larger weights. 
+
+Systematic errors are also
+considerably larger for \dpt measurements. This is mainly due to the nature of 
+the \dpt observable; as it is a difference, it enhances relative errors 
+significantly. Also, as shown in figure~\ref{fig:AcceptPlots}, error bars 
+became much larger for the corrected \dpt from the acceptance effect. This 
+result indicated an important statistical sensitivity introduced by our 
+weighting methods. The errors on \dpt are of the same order, or smaller, than 
+the differences observed between the two weighted data-sets. This is an 
+indication that the uncertainties reported in table \ref{tab:SysAcc} are, in 
+nature, similar to the statistical errors, in the sense that both originate 
+from the large variation between event-by-event weights. For this reason, we 
+decided not to include this error in our systematic budget to avoid double 
+counting this effect.
 
 \begin{table}[htbp]
   \centering
@@ -912,13 +949,18 @@ After testing several different acceptance correction methods, we finally conver
     $\langle \Delta P_\perp^2 \rangle^{\pi^-}_A$ & 5\% & 21\% \\
     \hline
   \end{tabular}
-  \caption{Relative errors on pions' observables using the two weighting methods described in the text.}
+  \caption{Relative errors on pions' observables using the two weighting 
+           methods described in the text.}
   \label{tab:SysAcc}
 \end{table}
 
 \subsubsection{Total Systematic Budget}
 
-The point-to-point errors include contributions from a detection contamination and acceptance effects. However, the normalization errors, which are independent of kinematical variables and due to acceptance effects, a target's misidentification and the isospin correction, are summarized in a table~\ref{tab:sysid}. 
+The point-to-point errors include contributions from the bad particle 
+identifications and acceptance effects. The normalization error, which is 
+independent of kinematic variables, are due to acceptance effects, target 
+misidentification and isospin correction; the constributions are summarized 
+in table~\ref{tab:sysid}. 
 
 \begin{table}[htbp]
   \centering
