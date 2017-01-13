@@ -147,7 +147,9 @@ positrons. In the rest of this analysis, we used only events with a single elect
 \subsubsection{$\pi^-$ Identification}
 \label{PiId}
 
-To identify negatively charged pions, we select negative tracks which didn't verify electrons' identification cuts. Pions are detected in the angular range from $\sim$10 to $\sim$140 degrees using only DC and SC signals.
+Pions are detected in the angular range from $\sim$10 to $\sim$140 degrees 
+using only DC and SC signals. To identify negatively charged pions, we select 
+negative tracks which were not identified as electrons already. 
 
 This identification consists mostly of a time of flight (TOF) test. We define 
 the relativistic particles' velocity difference as
@@ -184,8 +186,8 @@ Moreover, as only a very small amount of $K^-$s and no ${\bar p}s$ are present o
 
 The identification of positively charged pions is similar to that of negative 
 pions. However, the time of flight plot is significantly more busy (see figure 
-\ref{PipTOF}), indicating a significant contamination from $K^+$s and protons at a
-higher momentum. As the CC is not efficient enough for a hadron separation, the 
+\ref{PipTOF}), due to an important contamination from $K^+$s and protons at a
+high momentum. As the CC is not efficient enough for a hadron separation, the 
 numerous kaons and protons should be removed by the following tighter TOF cuts:
 
 \begin{subequations}\label{TOF-Pip}
@@ -235,7 +237,7 @@ correspond to the proton mass.}
 \label{TOF-3}
 \end{figure}
 
-These cuts permit to minimize the kaon contamination, below 2.5~GeV/c, and the 
+These cuts minimize the kaon contamination, below 2.5~GeV/c, and the 
 proton contamination for all momenta. The kaon contribution cannot be avoided, however, it should remain small ($\sim$ 3\% according to simulation) 
 with only a small effect on our final results (see section \ref{SysId} 
 for more details). Because protons could lead to even more contamination than kaons, 
@@ -339,10 +341,19 @@ position is less than 1.5~cm ($\sim$3~$\sigma$) from the values shown on table
 
 \subsubsection{Data Quality}
 
-To check the quality of the runs\footnote{Runs were formed roughly from two hours
-of data, but they were much smaller in case of problems.}, we monitored the ratio of scattered electrons yields obtained from solid and liquid targets. In case of the beam hitting other materials in the beam-line or of ony other problem that would affect our final result, 
-this ratio will be off and indicate the problematic runs. A figure 
-\ref{DataQ} shows electrons yields' ratios for different nuclear target; we fitted these ratios to extract the mean value for each target, then we discarded runs that were 5~$\sigma$ away from the appropriate mean. Must note that these ratios were consistent with our target's thicknesses given in \cite{Hakobyan:2008zz} except for a carbon target. For that reason, the density of the latter was recently remeasured, and its new value was finally matching our data\footnote{i.e. (1.747+/-0.0007)g/cm$^3$ instead of 2.235 g/cm$^3$}.
+To check the quality of the runs\footnote{Runs are typically stopped every two hours
+of data taking, but they can be smaller when experimental problems arrise.}, we 
+monitored the ratio of scattered electrons yields obtained from solid and liquid 
+targets. In case of the beam hitting other materials in the beam-line or of any 
+other problems that would affect our final result, 
+this ratio will be off and indicate the problematic runs. In figure 
+\ref{DataQ}, we show the electron yield ratios for different nuclear target; we 
+fitted these ratios to determine the mean value for each target, then we discarded 
+runs that were 5~$\sigma$ away from the appropriate mean. Must note that these 
+ratios were consistent with our target's thicknesses given in \cite{Hakobyan:2008zz} 
+except for a carbon target. For that reason, the density of the latter was 
+recently remeasured, and its new value was finally matching our 
+data\footnote{i.e. (1.747+/-0.0007)g/cm$^3$ instead of 2.235 g/cm$^3$}.
 
 \begin{figure}[tbp]
 \centering
@@ -420,7 +431,10 @@ Thus, new expressions of the weighted statistical uncertainties are derived:
 \subsubsection{Preliminary Results}
 \label{prelim}
 
-To provide some insight into the quality of our data, we present in figure~\ref{fig:prelim} few preliminary results before the application of any corrections. These preliminary results will be used also to illustrate the effects of the corrections discussed below.
+To provide some insight into the quality of our data, we present in 
+figure~\ref{fig:prelim} a few preliminary results before the application of 
+any corrections. These preliminary results will be used also to illustrate 
+the effects of the corrections discussed below.
 
 \begin{figure}[htb]
 \centering
@@ -442,7 +456,8 @@ broadening (bottom) before applying any corrections.}
 
 The acceptance correction consists of applying weights to the experimental data
 event by event to correct for any detection inefficiencies of used detectors.
-Incidentally, it also corrects for other small detection issues, such as misidentification and re-scattering on detectors' materials. The quality 
+Incidentally, it also corrects for other small detection issues, such as 
+misidentification and re-scattering on detector material. The quality 
 of the correction depends on the ability of the simulation to reproduce the 
 experiment, the accumulated statistics, and the size of interfering effects, such 
 as the bin migration. For this correction, we applied the method from the 
@@ -455,12 +470,13 @@ To correct for acceptance effects, we simulated a total of 100 million events
 per target ($^2$H, C, Fe and Pb) using the PYTHIA \cite{Sjostrand:2006za} 
 event generator that was slightly modified to include Fermi motion effects. The 
 generated events are processed by CLAS softwares (GSIM, GPP and user\_ana) 
-to simulate the detector and the reconstruction process similarly to the experimental data.
+to simulate the detector and the reconstruction process in a fashion similar 
+to that done with the experimental data.
 % TODO GPP factors
 
-Then the simulated data are processed in a similar way than the experimental data by 
+The simulated data are processed like the experimental data by 
 applying the cuts described in the section \ref{sec:pid}. Overall the 
-simulation reproduces quite well the detectors responses, yet two issues might 
+simulation reproduces quite well the detector response, yet two issues might 
 affect us and have to be understood. First, the efficiency of the CC is 
 overestimated in the simulation. On the electron side the signal is a little stronger in the simulation (11 
 photo-electrons) compared to experimental data (8 photo-electrons), but this 
@@ -531,8 +547,8 @@ migration\footnote{Fraction of events not reconstructed in the bin they were pro
 which introduces a bias in the evaluation of acceptance. Bin sizes are therefore chosen to
 be larger than the resolution associated to each kinematic variable.
 
-We used a 4-dimensional binning to divide the large phase space of our two particles' final 
-state. To evaluate systematic errors associated with this correction, we compared the
+We used a 4-dimensional binning to divide the large phase space of our two particle final 
+state. However, to evaluate systematic errors associated with this correction, we compared the
 method using two different sets of kinematic variables, as presented in 
 table~\ref{tab:AcceptBinning} and \ref{tab:AcceptBins}. The first set of variables is the one actually used for the
 analysis and the second set is only used to evaluate the systematic errors, so in the 
@@ -879,7 +895,7 @@ were found to be negligible.
 
 \subsubsection{Target Reconstruction}
 
-Because of reconstruction errors or scattering on detectors' material, it 
+Because of reconstruction errors or scattering on detector material, it 
 is possible to associate a particle with the wrong target. To estimate this 
 effect, we looked, in the experimental data, at the number of reconstructed 
 events upstream and downstream of our targets, where nothing should be 
@@ -956,11 +972,11 @@ counting this effect.
 
 \subsubsection{Total Systematic Budget}
 
-The point-to-point errors include contributions from the bad particle 
-identifications and acceptance effects. The normalization error, which is 
+The point-to-point errors include contributions from particle 
+misidentifications and acceptance effects. The normalization error, which is 
 independent of kinematic variables, are due to acceptance effects, target 
-misidentification and isospin correction; the constributions are summarized 
-in table~\ref{tab:sysid}. 
+misidentification and the isospin correction. The various constributions 
+to the systematic normalization error are summarized in table~\ref{tab:sysid}. 
 
 \begin{table}[htbp]
   \centering
