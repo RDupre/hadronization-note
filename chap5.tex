@@ -441,8 +441,12 @@ Thus, new expressions of the weighted statistical uncertainties are derived:
 
 Following the first round of questions from the analysis review committee, we
 reflected about this implementation of error bars and possible overlap with the 
-systematic errors
-evaluated below. We found first that the correlation between the weights should reduce
+systematic errors evaluated below. First we found an error with how the formula
+above was implemented and corrected it. This reduces the size of statistical 
+error bars of the transverse momentum broadening by roughly a factor 2 to 3. 
+
+TODO See new results and re evaluate statement below.
+We found first that the correlation between the weights should reduce
 the statistical errors. In a given bin the weights associated with each 
 targets are always of similar sizes, this correlation will reduce the size of 
 error bars. However, we do not see a method to properly take this 
@@ -731,7 +735,7 @@ correction of our data-sets. According to Aste {\it et al.}, the best effective
 potential approximation is given by $\bar V= 0.8 V_0$, where $V_0$ is the 
 electrostatic potential at the center of nuclei. The latter is evaluated as 
 $V_0= -3 \alpha_{EM} Z / (2 R)$, where $\alpha_{EM}$ is the fine-structure 
-constant, $Z$ is the proton number, and R is the radius of nuclei. Table 
+constant, $Z$ is the proton number, and $R$ is the radius of the nuclei. Table 
 \ref{tab:Coulomb} contains the used values of $V_0$ and $\bar V$ on different 
 nuclear target's analysis. The Coulomb correction is applied to both electrons 
 and charged pions before calculating the plotted kinematical variables.
@@ -752,6 +756,8 @@ Pb  & -23 &   -19 \\
   \caption{The $V_0$ and $\bar V$ values used on Coulomb corrections for different charged particles.}
   \label{tab:Coulomb}
 \end{table}
+
+TODO Add figures of the effect and comment from review answers!
 
 \subsubsection{Radiative Correction}
 \label{RadCor}
@@ -876,7 +882,8 @@ precision of the Hall~C measurement.
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=10cm] {chap5-fig/HallC-Isospin.png}
-\caption {}
+\caption {Ratios of deuteron over proton for $\pi^+$s and $\pi^-$s 
+as a function of \xb at $z=0.55$ \cite{Asaturyan:2011mq}.}
 \label{fig:RCexample}
 \end{figure}
 

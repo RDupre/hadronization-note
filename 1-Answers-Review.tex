@@ -288,8 +288,8 @@ right of the top right plot.
 later in the note in 2.5.1) is that the main issue there is the quantity of accidentals. Since
 the cross section get really small in this region, accidentals start to overcome
 the signal. We apply a cut
-$p_\perp^2 < 2.5$ GeV$^2$/c$^2$ to remove these regions. One could advocate to even lower this 
-cut, but it would affect significantly the outcome of the $\Delta P_\perp^2$, 
+$p_\perp^2 < 2.5$ GeV$^2$/c$^2$ to remove these regions. One could advocate to lower this 
+cut, but it would affect the outcome of the $\Delta P_\perp^2$, 
 because as often with averages the outliers have a strong impact.
 
 On the bright side, the slope and behavior appear to be rather well described by the MC
@@ -383,11 +383,11 @@ plot effect of this correction on particles? Is it really big enough to be visib
 resolutions ?
 
 {\it The Coulomb correction is applied to incoming and outgoing electrons as well as
-produced charged pions. Indeed the effect is invisible in most of the phase space as
-it is comparable to the resolution of the detector (points overlap completely). The 
-effect is small but visible only for very low $z$ pions. It has been implemented 
-because it was suggested it might be big, but we now find that it could have been 
-neglected at our kinematics.} \\
+produced charged pions. Indeed the effect is small in most of the phase space, but 
+by slightly shifting the $z$ distribution it slightly changes the normalization. A
+point to point effect is also visible for low $z$ pions. 
+
+TODO Add figure as a function of A1/3 and z.} \\
 
 
 19.
@@ -440,15 +440,17 @@ weights.  Might it also be lower statistics and so you have statistical fluctuat
 to the systematic error?  If so, you are sort of double-counting the statistical error and 
 inflating the systematic error more than it should be.  
 
-{\it This is an interesting question and we might have overlooked this problem. We changed
-our method of calculating the statistical errors to avoid the double counting, see
-discussion in the 2.3.1. section about the method to calculate the error bars. } \\
+{\it This is an interesting question and we might have overlooked this problem. We noted an error
+in our function calculating the statistical errors. This change in size somewhat
+modifies our initial statement, 
+
+TODO Complete the answer when full results are there.} \\
 
 25.
 P35 - It would clarify the discussion with a summary or table of the point-to-point systematic 
 errors.
 
-{\it The point-to-point errors include only contributions from the bad particle 
+{\it The point-to-point errors include only contributions from the particle 
 identifications and acceptance effects. It is also different for every bin, so
 we did not think a table would be useful to summarize only two contributions.} \\
 
