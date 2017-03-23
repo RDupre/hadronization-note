@@ -62,17 +62,20 @@ the different analysis performed on this topic (all three pions in particular). 
 will eventually translate into an addendum to this note with comparisons between Hayk's 
 and this analysis, which will be used to confirm the proper sizing of the systematic errors. 
 In a later stage an extra analysis note from Hayk will be submitted
-for the extraction of multi-dimensional results on pi+.} \\
+for the extraction of multi-dimensional results on $\pi^+$.} \\
 
 
 2.
 The particle ID and cuts seem to be well understood.  The acceptance correction and 
-radiative corrections need to be developed.  There is confusion about how the acceptance 
-corrections were done (see Section 2 below).  The radiative corrections are incomplete as 
+radiative corrections need to be developed. There is confusion about how the acceptance 
+corrections were done (see Section 2 below). The radiative corrections are incomplete as 
 reported in the note.  Both corrections need to be well-understood before the committee can 
 approve of the analysis.
 
-{\it TODO when all questions are answered.} \\
+{\it The text about acceptance has been reviewed in details to be clearer in this new 
+version. The section about radiative corrections has been updated with the new method.
+We maybe should meet during the next CLAS collaboration meeting (end of March) to clarify 
+some of the simpler issues.} \\
 
 3.
 In the next version, line numbers need to be added to the document for easier reference.
@@ -97,8 +100,6 @@ say all this on page 3 of the paper.  But I think an additional sentence is warr
 
 {\it Indeed the sentence about neutrino was a little too short. We moved it and added a 
 sentence to clarify the point.}\\
-
-
 
 2.
 P10 footnote: "single photon" could be confusing in this context, since the mean number of 
@@ -145,7 +146,7 @@ correspond to muon and electron masses.}
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
+\includegraphics[width=8cm] {answer-fig/TofProfile2.png} 
 \caption {$\Delta \beta$ of positively charged particles for medium momentum slices 
 (GeV/c). The red lines shows the applied cuts to select positive pions. The bump on the left
 correspond to the kaon mass.}
@@ -154,8 +155,8 @@ correspond to the kaon mass.}
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
-\caption {$\Delta \beta$ of positively charged particles for low momentum slices 
+\includegraphics[width=8cm] {answer-fig/TofProfile3.png} 
+\caption {$\Delta \beta$ of positively charged particles for high momentum slices 
 (GeV/c). The red lines shows the applied cuts to select positive pions. The bump on the left
 correspond to the proton mass.}
 \label{TOF-3}
@@ -237,15 +238,17 @@ cleaned from known detector failures. (The text is corrected in the note.) }
 
 
 8.
-P19, FIg. 14- Hard to tell how much data was discarded.  Maybe give a table of means and 
+P19, FIg. 14- Hard to tell how much data was discarded. Maybe give a table of means and 
 sigmas for each target or show the cuts on the figure are horizontal lines.
 
 {\it The quantity of data removed is difficult to assess, since the problematic runs were
 not passed through the final analysis. We were unable to recover the orginal values of the
 fits for these specific figures and we 
-lack the problematic run which have been deleted. At this stage, we do not deem necessary
-to pull these old discarded data and reactivate the associated codes. If the reviewer
-think it is necessary, it is time consuming but of course possible.}
+lack the problematic run which have been deleted. At this stage, it would be rather time
+consuming to recover all the data and update the softwares to run on the new machines, so 
+we did not produce this figure. If the reviewer think it is necessary to update this 
+figure and provide more information about the discarded data let us know, it is time 
+consuming but of course possible.}
 
 9.
 P19 - If you use "c" constant in dimensions of Q2, then use it for W as well.
@@ -285,8 +288,8 @@ right of the top right plot.
 later in the note in 2.5.1) is that the main issue there is the quantity of accidentals. Since
 the cross section get really small in this region, accidentals start to overcome
 the signal. We apply a cut
-$p_\perp^2 < 2.5$ GeV$^2$/c$^2$ to remove these regions. One could advocate to even lower this 
-cut, but it would affect significantly the outcome of the $\Delta P_\perp^2$, 
+$p_\perp^2 < 2.5$ GeV$^2$/c$^2$ to remove these regions. One could advocate to lower this 
+cut, but it would affect the outcome of the $\Delta P_\perp^2$, 
 because as often with averages the outliers have a strong impact.
 
 On the bright side, the slope and behavior appear to be rather well described by the MC
@@ -311,32 +314,31 @@ something is amiss.  Anyway, that’s not where you want readers to be.
 { \it The section has been reworked to clarify what we are doing. Few points you raised 
 are also answered here:
 
-The first set of variables is the one actually used for the
-analysis and the second set is only used to evaluate the systematic errors, so in the 
-note, the formulas are given only for the first set.
+The first set of variables is the one used for the acceptance correction used for results,
+while the second set is only used to evaluate the systematic errors. In the 
+note, the formulas are generally given only for the first set for simplicity.
 
-The motivation for using such a weight cut based on the product of different unrelated
-values is actually directly linked to the inbent 
-particles being directed in the beam pipe. The $\pi^-$ acceptance drops very 
+The motivation for using such a strange cut based on the product of different unrelated
+values is actually directly linked to the problem of inbent 
+particles being directed towards the beam pipe. The $\pi^-$ acceptance drops very 
 strongly at low $p_\perp^2$ leading to very high weights, however there is no problem of 
 bin migration
 or low statistics because the generated yield is very high in this region. We found that 
 the best way
-to keep these bins while discarding bins where the weight might be slightly smaller but with 
-issues concerning bin migration and statistics was to apply this type of cut.
+to keep these bins while discarding bins where the sizze of the weight is less problematic 
+but with issues concerning bin migration and statistics was to apply this type of cut.
 
 In term of method, the two
 step acceptance correction is hopefully going to be clearer. It is the same as the method used 
 in the previous L. El Fassi et al. analysis note. The second step of the procedure is
-specifically used to take care of the holes in the acceptance (note, they are not really 
-holes because problematic bins are generally on the edges). You can see that the weights
+specifically used to take care of the bins that are removed by the cut on weights. You 
+can see in the formula that the weights
 of the previously calculated acceptance are used in this step, ensuring that we do not
 double correct the data.
 
 The size of the bins is not constant and is indeed increased in region with small event yield.
 However, the multi dimensional binning cannot be fully adapted in a general maner. On this
 topic we added tables in the note indicating the bin limits that we used.} \\
-
 
 14.
 P26, bottom, if you have regions with very low acceptance, should they be cut out?
@@ -381,18 +383,18 @@ plot effect of this correction on particles? Is it really big enough to be visib
 resolutions ?
 
 {\it The Coulomb correction is applied to incoming and outgoing electrons as well as
-produced charged pions. Indeed the effect is invisible in most of the phase space as
-it is comparable to the resolution of the detector (points overlap completely). The 
-effect is small but visible only for very low $z$ pions. It has been implemented 
-because it was suggested it might be big, but we now find that can be neglected 
-at our kinematics. ADD a FIGURE???} \\
+produced charged pions. Indeed the effect is small in most of the phase space, but 
+by slightly shifting the $z$ distribution it slightly changes the normalization. A
+point to point effect is also visible for low $z$ pions. 
+
+TODO Add figure as a function of A1/3 and z.} \\
 
 
 19.
 P30 - 
 fig.24 is missing X axis label. You also may consider 2D histogram for better display.
 
-{\it FIGURE TO BE REPLACED COMPLETELY} \\
+{\it This figure is replaced by others in the new radiative correction section.} \\
 
 
 20.
@@ -414,7 +416,7 @@ P33, Sec. 2.5.1 - list the negligible effects.
 22.
 P34, Fig. 28 - why is the resolution poorer than in Fig. 12?
 
-{\it Resolution is the same, it looks wider because on this figure, we show the integrated 
+{\it Resolution is the same, it looks wider because, on this figure, we show the integrated 
 result over the 6 sectors.} \\
 
 
@@ -438,14 +440,17 @@ weights.  Might it also be lower statistics and so you have statistical fluctuat
 to the systematic error?  If so, you are sort of double-counting the statistical error and 
 inflating the systematic error more than it should be.  
 
-{\it This is an interesting question and we might have overlooked this problem. WE
-NEED TO THINK ABOUT THAT. } \\
+{\it This is an interesting question and we might have overlooked this problem. We noted an error
+in our function calculating the statistical errors. This change in size somewhat
+modifies our initial statement, 
+
+TODO Complete the answer when full results are there.} \\
 
 25.
 P35 - It would clarify the discussion with a summary or table of the point-to-point systematic 
 errors.
 
-{\it The point-to-point errors include only contributions from the bad particle 
+{\it The point-to-point errors include only contributions from the particle 
 identifications and acceptance effects. It is also different for every bin, so
 we did not think a table would be useful to summarize only two contributions.} \\
 

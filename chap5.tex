@@ -15,7 +15,8 @@ decided to not use them in this analysis.}.
 As the two experiments aimed at comparing deuterium with heavy nuclei, it was 
 decided to use a double target system~\cite{Hakobyan:2008zz}. The first target 
 was filled with liquid deuterium, and the second was a solid target. The 
-latter was made of either carbon, aluminum, iron, tin or lead, and was changed 
+latter was made of either carbon, aluminum, iron, tin\footnote{The tin was 
+enriched and composed of more than 99\% $^{120}$Sn.} or lead, and was changed 
 remotely (see figure~\ref{fig:phototarget}). The two targets were separated by 
 only 4~cm in order to minimize the difference on CLAS acceptance between them. 
 The advantage of having two targets mounted simultaneously on the beam line is 
@@ -26,19 +27,23 @@ cancel in the nuclear ratio.
 \centering
 \includegraphics[width=7cm] {chap5-fig/PhTar.jpg} 
 \caption {Picture of the {\it eg2} target system. The cryogenic target is 
-in the back wrapped with aluminum foils, while solid targets are held by mechanical arms that were controlled remotely. In the picture, the top solid target is in the beam line.}
+in the back wrapped with aluminum foils, while solid targets are held by 
+mechanical arms that were controlled remotely. In the picture, the top 
+solid target is in the beam line.}
 \label{fig:phototarget}
 \end{figure}
 
 The analysis of the experiment E-02-110, focusing on the study of color 
 transparency effects, has been approved and published~\cite{ElFassi:2008}. As this 
-analysis went through a careful review by the CLAS collaboration, we have adapted similar analysis methods as much as possible. In particular, the electron selection 
+analysis went through a careful review by the CLAS collaboration, we have 
+adapted similar analysis methods as much as possible. In particular, the electron selection 
 presented here is very similar to theirs; the main difference being a new 
 target determination method. The pion identification cuts are, however, tightened
 in this analysis as we have less constraints on the kinematics to exclude any possible pion contamination.
 
 In the section \ref{sec:pid}, we identify the following particles, e$^-$, 
-$\pi^-$ and $\pi^+$ using a series of cuts on various detector outputs. For pions, we require a signal in the drift chambers (DC) and scintillator counters (SC) in 
+$\pi^-$ and $\pi^+$ using a series of cuts on various detector outputs. For 
+pions, we require a signal in the drift chambers (DC) and scintillator counters (SC) in 
 addition to the successful reconstruction of the time-based tracking. For electron 
 identification, we use the same standards but requesting a good signal from 
 all detectors, DC, Cherenkov Counters (CC), SC and Electromagnetic 
@@ -221,7 +226,7 @@ correspond to muon and electron masses.}
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
+\includegraphics[width=8cm] {answer-fig/TofProfile2.png} 
 \caption {$\Delta \beta$ of positively charged particles for medium momentum slices 
 (GeV/c). The red lines shows the applied cuts to select positive pions. The bump on the left
 correspond to the kaon mass.}
@@ -230,8 +235,8 @@ correspond to the kaon mass.}
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=8cm] {answer-fig/TofProfile1.png} 
-\caption {$\Delta \beta$ of positively charged particles for low momentum slices 
+\includegraphics[width=8cm] {answer-fig/TofProfile3.png} 
+\caption {$\Delta \beta$ of positively charged particles for high momentum slices 
 (GeV/c). The red lines shows the applied cuts to select positive pions. The bump on the left
 correspond to the proton mass.}
 \label{TOF-3}
@@ -386,10 +391,12 @@ We also apply a cut on the energy transferred fraction, $y = \nu/E_{beam} < 0.85
 
 Once the identification is done, the calculation of our two observables and their statistical uncertainties is straightforward. The latter are given by:
 \begin{equation}
+\label{eq:MRError}
 {\delta \left ( R_A^h \right ) \over R_A^h} = \sqrt{ 1 /N_A^h + 1/ N_A^e +1/N_D^h + 1/N_D^e}
 \end{equation}
 and
 \begin{equation}
+\label{eq:DPtError}
 \left ( \delta \left ( \Delta \langle P_\perp^2 \rangle \right ) \right )^2 = 
    \left ({\langle P_\perp^4 \rangle - \langle P_\perp^2 \rangle ^2}\right )_A / N_A^h
  + \left ({\langle P_\perp^4 \rangle - \langle P_\perp^2 \rangle ^2}\right )_D / N_D^h.
@@ -421,12 +428,36 @@ Thus, new expressions of the weighted statistical uncertainties are derived:
 \begin{equation}
 \begin{split}
 \left ( \delta \left ( \Delta \langle P_\perp^2 \rangle \right ) \right )^2 = 
-   \left ({{\sum \omega^h_A P_\perp^4 }\over{\sum \omega^h_A}} - \left ({\sum \omega^h_A P_\perp^2 }\over{\sum \omega^h_A}\right )^2 \right ) 
-         \times \left ( {\sum \left ( {\omega^h_A}^2 \right ) \over \left ( \sum \omega^h_A \right ) ^2 }\right ) \\
- + \left ({{\sum \omega^h_D P_\perp^4 }\over{\sum \omega^h_D}} - \left ({\sum \omega^h_D P_\perp^2 }\over{\sum \omega^h_D}\right )^2 \right ) 
-	 \times \left ( {\sum \left ( {\omega^h_D}^2 \right ) \over \left ( \sum \omega^h_D \right ) ^2 }\right ).
+   \left ({{\sum \omega^h_A P_\perp^4 }\over{\sum \omega^h_A}} 
+ - \left ({\sum \omega^h_A P_\perp^2 }\over{\sum \omega^h_A}\right )^2 \right ) 
+         \times \left ( {\sum \left ( {\omega^h_A}^2 \right ) \over 
+                \left ( \sum \omega^h_A \right ) ^2 }\right ) \\
+ + \left ({{\sum \omega^h_D P_\perp^4 }\over{\sum \omega^h_D}} 
+ - \left ({\sum \omega^h_D P_\perp^2 }\over{\sum \omega^h_D}\right )^2 \right ) 
+	 \times \left ( {\sum \left ( {\omega^h_D}^2 \right ) 
+          \over \left ( \sum \omega^h_D \right ) ^2 }\right ).
 \end{split}
 \end{equation}
+
+Following the first round of questions from the analysis review committee, we
+reflected about this implementation of error bars and possible overlap with the 
+systematic errors evaluated below. First we found an error with how the formula
+above was implemented and corrected it. This reduces the size of statistical 
+error bars of the transverse momentum broadening by roughly a factor 2 to 3. 
+
+TODO See new results and re evaluate statement below.
+We found first that the correlation between the weights should reduce
+the statistical errors. In a given bin the weights associated with each 
+targets are always of similar sizes, this correlation will reduce the size of 
+error bars. However, we do not see a method to properly take this 
+effect fully into account in term of purely statistical error bars. In order
+to solve this issue we came back to a point by the committee on the topic of 
+systematic error bars (Q 24). There it was noted that some of these effects are
+double counted once in the statistical error and once in the systematic. As these
+errors are solely due to the acceptance correction, we decided to account them 
+only in the systematic error budget. So we reverted statistical errors to equations
+\ref{eq:MRError} and \ref{eq:DPtError} and keep the full systematic errors as they
+were evaluated before.
 
 \subsubsection{Preliminary Results}
 \label{prelim}
@@ -463,9 +494,7 @@ experiment, the accumulated statistics, and the size of interfering effects, suc
 as the bin migration. For this correction, we applied the method from the 
 approved and published analysis from the same eg2 data~\cite{ElFassi:2008}.
 
-\paragraph{Simulation}
-\label{sec:simul}
-
+\paragraph{Simulation} ~\\
 To correct for acceptance effects, we simulated a total of 100 million events 
 per target ($^2$H, C, Fe and Pb) using the PYTHIA \cite{Sjostrand:2006za} 
 event generator that was slightly modified to include Fermi motion effects. The 
@@ -531,8 +560,7 @@ from simulated (red crosses) and experimental (histogram) data using deuterium t
 \end{figure}
 
 
-\paragraph{Correction of the Data}
-
+\paragraph{Correction of the Data} ~\\
 The acceptance correction coefficients are defined as the ratio of reconstructed and generated events,
 
 \begin{equation}
@@ -595,7 +623,7 @@ to keep a good statistical precision and a small bin migration.
 
 \begin{table}[htbp]
 \center
-\begin{tabular} {|l|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|}
 \hline
  $\nu$ & \xb & $p_\pi$ & $-t$ \\ \hline
  2.20 & 0.12 & 0.25 &-3.50 \\ 
@@ -608,7 +636,7 @@ to keep a good statistical precision and a small bin migration.
       &      & 4.25 &-0.00 \\ \hline
 \end{tabular}
 \quad
-\begin{tabular} {|l|c|c|c|c|}
+\begin{tabular} {|c|c|c|c|c|}
 \hline
  $Q^2$ & $\nu$ & $z$ & $-t$ \\ \hline
  1.00 & 2.20 & 0.00 & -3.50 \\
@@ -695,16 +723,31 @@ to the HERMES results (see figure~\ref{fig:her3}).
 \subsubsection{Coulomb Correction}
 \label{CCor}
 
-The large electric charge of our nuclear targets create an electric field that should be taken into account at our energies. Besides the fact that the nuclear electric field accelerates or decelerates the incoming and outgoing charged particles, it has some non trivial effects such as the focusing of low energy particles. Aste {\it et al.}~\cite{Aste:2005wc} showed that these Coulomb effects could be corrected for by using an effective momentum approximation at large momenta ({\it i.e.}, $Q^2>.5$ GeV$^2$). As our kinematics coverage is beyond this limit, we decided to use this approximation on the coulomb correction of our data-sets. According to Aste {\it et al.}, the best effective potential approximation is given by $\bar V= 0.8 V_0$, where $V_0$ is the electrostatic potential at the center of nuclei. The latter is evaluated as $V_0= -3 \alpha_{EM} Z / (2 R)$, where $\alpha_{EM}$ is the fine-structure constant, Z is the proton number, and R is the radius of nuclei. Table 5 contains the used values of $V_0$ and $\bar V$ on different nuclear target's analysis. We must note that this Coulomb correction has been applied to both electrons and charged pions before calculating any kinematical variables.
+The large electric charge of our nuclear targets create an electric field that 
+should be taken into account at our energies. Besides the fact that the nuclear 
+electric field accelerates or decelerates the incoming and outgoing charged 
+particles, it has some non trivial effects such as the focusing of low energy 
+particles. Aste {\it et al.}~\cite{Aste:2005wc} showed that these Coulomb 
+effects could be corrected for by using an effective momentum approximation at 
+large momenta ({\it i.e.}, $Q^2>.5$ GeV$^2$). As our kinematics coverage is 
+beyond this limit, we decided to use this approximation on the Coulomb 
+correction of our data-sets. According to Aste {\it et al.}, the best effective 
+potential approximation is given by $\bar V= 0.8 V_0$, where $V_0$ is the 
+electrostatic potential at the center of nuclei. The latter is evaluated as 
+$V_0= -3 \alpha_{EM} Z / (2 R)$, where $\alpha_{EM}$ is the fine-structure 
+constant, $Z$ is the proton number, and $R$ is the radius of the nuclei. Table 
+\ref{tab:Coulomb} contains the used values of $V_0$ and $\bar V$ on different 
+nuclear target's analysis. The Coulomb correction is applied to both electrons 
+and charged pions before calculating the plotted kinematical variables.
 
 \begin{table}[htbp]
   \centering
   \begin{tabular}{@{} ccc @{}}
-    \hline
+    \hline 
 Nucleus & $V_0$ (MeV)  &  $\bar V$ (MeV) \\ \hline
-$^2$H  & -1  &     -1 \\
-C   &  -4 &      -3 \\
-Al  &  -7 &      -6 \\
+$^2$H & -1 &   -1 \\
+C   &  -4 &    -3 \\
+Al  &  -7 &    -6 \\
 Fe  & -11 &    -9 \\
 Sn  & -17 &   -14 \\
 Pb  & -23 &   -19 \\
@@ -714,63 +757,112 @@ Pb  & -23 &   -19 \\
   \label{tab:Coulomb}
 \end{table}
 
+TODO Add figures of the effect and comment from review answers!
+
 \subsubsection{Radiative Correction}
 \label{RadCor}
 
-Despite its lower magnitude compared to the strong force, the 
-electromagnetic force may have a non negligible impact on our results. The 
-reason is that even a moderate energy photon emission can modify significantly the measured kinematical variables. To correct this effect, several simulation codes exist \cite{Akushevich:2001yp}, however, none of them treat directly the SIDIS production on nuclei. For that reason, a dedicated Monte-Carlo simulation based on existing codes was developed.
-
-\paragraph{Simulation}
-
-The inclusive radiative effects are generated using the RADGEN code 
-\cite{Akushevich:1998ft}, which includes Feynman diagrams shown in 
-figure~\ref{fig:FDRadCorr}. Using this code one can evaluate the correction 
-factors for inclusive measurements as $\delta = \sigma_{obs} / \sigma_{Born}$, where $\sigma_{obs}$ is the measured inclusive cross section, and $\sigma_{Born}$ is the Born cross section. As RADGEN is also a Monte-Carlo generator for photon emissions, it could be used to modify the virtual photon kinematics before the 
-hadron production in any DIS generator. This allows the evaluation of the radiative 
-effects on semi-inclusive measurements by implementing RADGEN inside the main 
-Monte-Carlo event generator.
+The QED diagrams shown in figure \ref{fig:FDRadCorr} contribute to the measurement
+of the leptoproduction of hadrons. The diagram (a) is the Born cross section, the
+others are radiative contributions that we would like to subtract in order to 
+have results more easily interpretable in term of hadronic physics.
+This substraction is what we call the radiative correction, as can be seen 
+this correction should take care of real photon productions (diagrams b and c)
+but also virtual photon exchange (diagram d) and photon self energy (diagram e).
+We neglect exchanges of photons with hadrons as they are suppressed due to the 
+large mass of hadrons in comparison to electrons. For practical reasons, we also 
+limit this correction to leading order as can be seen from the presented diagrams.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=12cm] {chap5-fig/RadDiag.png}
-\caption {Diagrams taken into account in RADGEN \cite{Akushevich:1998ft}. The 
-diagrams b) to e) contribute to the first order calculation of the radiative 
-effects on Born cross section (diagram a)).}
+\caption {Diagrams taken into account in the HAPRAD 2 code \cite{Akushevich:2007jc}. The 
+diagrams b to e contribute to the first order calculation of the radiative 
+effects of the Born cross section represented in diagram a.}
 \label{fig:FDRadCorr}
 \end{figure}
 
-The Monte-Carlo simulation was done using the event generator, GENIE~\cite{Andreopoulos:2009rq}, that describes well electron-nucleus interactions. Indeed, GENIE contains the quasi-elastic scattering\footnote{Elastic 
-scattering off a single nucleon on nuclei.}, which is considered as the main channel generating radiative events in the DIS region \cite{Akushevich:2007jc}. This generator includes also hadronic cascades in nuclei, at which pions might be generated in quasi-elastic events. This is an important feature because the quasi-elastic production can not contribute directly to semi-inclusive measurements.
+The radiative correction is not expected to be important in the multiplicity 
+ratios due to the double cancellation between the different contributions of 
+the ratio. However, its impact on the transverse momentum brodening is more 
+difficult to anticipate. We therefore decided to calculate the correction using 
+the recent Haprad 2 code \cite{Akushevich:2007jc} with adaptations to include
+nuclear effects such as Fermi motion \cite{Osipenko:PC}. This calculation is
+using modeled semi-inclusive structure functions (based on former CLAS
+data \cite{Akushevich:2007jc}) and modeled exclusive channels from MAID 2003
+\cite{Drechsel:1998hk}. This calculation is the state of the art in the matter
+as it is an exact calculation in the complete five dimension cross section
+and do not use the peaking approximation generally used in previous method.
 
-\paragraph{Correction of the Data}
+To apply the radiative correction, we apply a weight to each events in a fashion
+similar to the acceptance correction. The HAPRAD 2 code provides 
+$\delta = \sigma_{obs} / \sigma_B$ at given kinematics. Table \ref{tab:RCBins} 
+shows the binning used to calculate the radiative correction weights.
+We chose to make a finer 
+binning for the radiative corrections than for acceptance as the computing time 
+to calculate weights is more reasonnable (around 1000 days of cpu time). 
 
-We generated 100 million events with and without radiative effects for each target. The RADGEN code gave us the magnitude of inclusive correction coefficients, however, the comparison between the two data sets allows the extraction of semi-inclusive correction factors.
+\begin{table}[htbp]
+\center
+\begin{tabular} {|c|c|c|c|c|c|c|}
+\hline
+Bin Nb & $\nu$ & \xb & $p_\pi$ & $-t$ & $\phi$ \\ \hline
 
-The ratio of inclusive correction factors, as depicted in figure \ref{fig:RadCorrFac}, is relatively small (couple of percents at most) except for low \xb and high $\nu$. Similarly for the semi-inclusive factors' ratio shown in figure \ref{fig:RadCorrFacSIDIS} as a function of $z$ and \ptp. However, the associated statistical errors are quite large because only a small fraction of the events involved a photon radiation.
+ 0     & 2.25 & 0.12 & 0.20 & -3.50 &   0.0 \\ 
+ 1     & 2.45 & 0.15 & 0.35 & -2.10 &  18.0 \\ 
+ 2     & 2.66 & 0.17 & 0.50 & -1.75 &  36.0 \\ 
+ 3     & 2.82 & 0.18 & 0.75 & -1.50 &  54.0 \\ 
+ 4     & 2.96 & 0.19 & 1.00 & -1.30 &  72.0 \\ 
+ 5     & 3.07 & 0.20 & 1.60 & -1.10 &  90.0 \\ 
+ 6     & 3.17 & 0.21 & 2.20 & -0.75 & 108.0 \\ 
+ 7     & 3.27 & 0.22 & 4.25 &  0.00 & 126.0 \\ 
+ 8     & 3.37 & 0.23 &      &       & 144.0 \\ 
+ 9     & 3.46 & 0.24 &      &       & 162.0 \\ 
+10     & 3.55 & 0.25 &      &       & 180.0 \\ 
+11     & 3.64 & 0.26 &      &       &       \\ 
+12     & 3.72 & 0.27 &      &       &       \\ 
+13     & 3.80 & 0.28 &      &       &       \\ 
+14     & 3.87 & 0.30 &      &       &       \\ 
+15     & 3.94 & 0.33 &      &       &       \\ 
+16     & 4.01 & 0.36 &      &       &       \\ 
+17     & 4.07 & 0.39 &      &       &       \\ 
+18     & 4.12 & 0.43 &      &       &       \\ 
+19     & 4.18 & 0.48 &      &       &       \\ 
+20     & 4.25 & 0.56 &      &       &       \\   
+                                          
+\hline
+\end{tabular}
+\caption{Bin limits used for the radiative correction described in section \ref{RadCor}.}
+  \label{tab:RCBins}
+\end{table}
 
-\begin{figure}[htbp]
+We show in figure \ref{fig:RCexample} a selected sample of radiative correction factors
+($= \delta_{Fe} / \delta_D$) in order to illustrate the expected effect on observables.
+In the large majority of the cases the factors are within 5\% of 1, so we do not expect to
+see a strong effect on the final results where these will be integrated. This is confirmed 
+in figure \ref{} ... In the case of the transverse momentum braodening, the variations
+appear to ...
+
+\begin{figure}[tbp]
 \centering
-\includegraphics[width=9cm] {chap5-fig/ElecRadWei_Lead.png}
-\caption {Ratios of radiative correction factors, $\delta_\text{Pb}/
-\delta_{^2\text{H}}$, as a function of \xb in various $\nu$ bins.}
-\label{fig:RadCorrFac}
+\includegraphics[width=7cm] {chap5-fig/ElecRadWei_Iron_2356.png}
+\includegraphics[width=7cm] {chap5-fig/ElecRadWei_Iron_3756.png}
+\includegraphics[width=7cm] {chap5-fig/ElecRadWei_Iron_7756.png}
+\includegraphics[width=7cm] {chap5-fig/ElecRadWei_Iron_10756.png}
+\includegraphics[width=7cm] {chap5-fig/ElecRadWei_Iron_11556.png}
+\includegraphics[width=7cm] {chap5-fig/ElecRadWei_Iron_18956.png}
+\caption {RC factors ($= \delta_{Fe} / \delta_D$) as a function of $\phi$ and 
+$-t$ for a selection of bins specified above each figure.}
+\label{fig:IsoSpin}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
 \centering
-\includegraphics[width=9cm] {chap5-fig/RadGenFactors.png}
-\caption {Ratios of radiative correction factors, $\delta_\text{Pb}/
-\delta_{^2\text{H}}$, as a function of $z$ (top) and \ptp (bottom).}
-\label{fig:RadCorrFacSIDIS}
+\caption {Preliminary results ..., 
+for multiplicity ratios (top) and transverse momentum broadening 
+(bottom). Only statistical errors are shown.}
+\label{fig:RCPlots}
 \end{figure}
-
-The semi-inclusive part of the radiative correction turned out to be limited 
-in amplitude for the most kinematics, except for high $z$ and \ptp. Thus, we decided to not apply this correction before further studies.
-
-{\color{red} We found a better way to implement the radiative correction,
-that is not limited by the used MC technique. We will implement it in
-the second version of the note as we do not want to delay the review process because this correction that we already found to be small. Sorry about that.}
 
 \subsubsection{Isospin Correction}
 
@@ -790,9 +882,9 @@ precision of the Hall~C measurement.
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=10cm] {chap5-fig/HallC-Isospin.png}
-\caption {Ratios of deuteron over proton for $\pi^+$s (top) and $\pi^-$s (bottom)
+\caption {Ratios of deuteron over proton for $\pi^+$s and $\pi^-$s 
 as a function of \xb at $z=0.55$ \cite{Asaturyan:2011mq}.}
-\label{fig:IsoSpin}
+\label{fig:RCexample}
 \end{figure}
 
 \begin{table}[htbp]
