@@ -164,8 +164,7 @@ The previous analysis from L. El Fassi et al. used $\pm 0.05$ ($\sim 3\sigma$), 
 to reduce this number to about $2\sigma$ because of the difference of observables. The 
 color transparency analysis was reconstructing the $\rho^0$ and implemented strong kinematical
 cut that reduced significantly possible contaminations. Our measurement uses all the 
-semi-inclusive production and is therefore more sensitive to contaminations. See next 
-question for profiles.
+semi-inclusive production and is therefore more sensitive to contaminations. 
 
 \begin{figure}[tbp]
 \centering
@@ -204,8 +203,8 @@ numerous kaons and protons should be removed by the following tighter TOF cuts:
 \end{align}
 \end{subequations}
 
-The much more apparent contamination sources than for negative pions, allow to study 
-the TOF profile much more thoroughly. You can see in figures~\ref{TOF-1}, \ref{TOF-2} and 
+The much more apparent contamination sources than for negative pions, motivates us to study 
+the TOF profile much more thoroughly. One can see in figures~\ref{TOF-1}, \ref{TOF-2} and 
 \ref{TOF-3} the $\Delta \beta$ profiles for many momentum slices. In figure~\ref{TOF-1}
 one can see some contamination from lighter leptons ($e+$ and $\mu^+$). These represent
 a very small amount and one can see some justification for the choice of a $\pm 0.03$
@@ -924,6 +923,30 @@ this result was expected and demonstrates the importance of this correction.
 \label{fig:IsoPlot}
 \end{figure}
 
+\subsubsection{Endcap correction}
+
+TO BE IMPLEMENTED IN THE ANALYSIS
+
+The goal of this work is to correct the measured multiplicity ratio:
+\begin{equation}
+  R_h^A |_{corr} = {N_h^A / N_e^A \over (N_h^D-N_h^{EC}) / (N_e^D-N_e^{EC})},
+\end{equation}
+with the $EC$ target being the endcaps of the liquid target. Using a Taylor expension at first order for small $N^{EC}$, we find that:
+\begin{equation}
+  {N_h^D-N_h^{EC} \over N_e^D-N_e^{EC}} = {N_h^D \over N_e^D} - {N_h^{EC} \over N_e^D} + {N_e^{EC} N_h^D \over {N_e^D}^2}.
+\end{equation}
+After few straightforward transformation, we get
+\begin{equation}
+  R_h^A |_{corr} = R_h^A \left( 1 - {N_e^{EC} \over N_e^D} \left( 1-R_h^{Al} \right) \right).
+\end{equation}
+Based on target thickness ${N_e^{EC} \over N_e^D} \sim 0.03$ and $R_h^{Al} \sim 0.65$, the correction is on average a 1\% decrease of the measured multiplicity ratio.
+
+With the same method, the transverse momentum broadening can be corrected with:
+\begin{equation}
+  \Delta P_T^2 |_{corr} = \Delta P_T^2 + R_h^{Al} {N_e^{EC} \over N_e^D} \Delta P_T^2|_{Al}
+\end{equation}
+
+
 \subsection{Systematic Uncertainties}
 \label{sec:TotSys}
 
@@ -1027,21 +1050,10 @@ The two different approaches to binning the data presented on a table
 difference between these two methods on iron data are used to evaluate 
 the relative uncertainties presented in a table~\ref{tab:SysAcc}. We noticed 
 the significantly large errors for $\pi^-$s, which were expected, due to their 
-lower acceptance and larger weights. 
-
-Systematic errors are also
+larger acceptance weights. Systematic errors are also
 considerably larger for \dpt measurements. This is mainly due to the nature of 
 the \dpt observable; as it is a difference, it enhances relative errors 
-significantly. Also, as shown in figure~\ref{fig:AcceptPlots}, error bars 
-became much larger for the corrected \dpt from the acceptance effect. This 
-result indicated an important statistical sensitivity introduced by our 
-weighting methods. The errors on \dpt are of the same order, or smaller, than 
-the differences observed between the two weighted data-sets. This is an 
-indication that the uncertainties reported in table \ref{tab:SysAcc} are, in 
-nature, similar to the statistical errors, in the sense that both originate 
-from the large variation between event-by-event weights. For this reason, we 
-decided not to include this error in our systematic budget to avoid double 
-counting this effect.
+rather than cancelling them. 
 
 \begin{table}[htbp]
   \centering

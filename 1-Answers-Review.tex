@@ -74,8 +74,7 @@ approve of the analysis.
 
 {\it The text about acceptance has been reviewed in details to be clearer in this new 
 version. The section about radiative corrections has been updated with the new method.
-We maybe should meet during the next CLAS collaboration meeting (end of March) to clarify 
-some of the simpler issues.} \\
+We can have a meeting to clarify some of the simpler issues more rapidly.} \\
 
 3.
 In the next version, line numbers need to be added to the document for easier reference.
@@ -203,7 +202,7 @@ P17, Fig 12 - what solid target is shown?  Are the shifts the same for electrons
 {\it Sadly, this cannot be checked, the kumac used for this figure specify a file name that
 do not exist anymore (codes and files have been moved at some point and non essential files
 have been removed in the process). It is always possible to reproduce the figure with a root 
-routine if the reviewer feel it is necessary. 
+routine if the reviewer feel it is necessary to know the specific run used. 
 
 We provide here figure \ref{VertexEl} to better illustrate the result and figure 
 \ref{VertexPip} to show that the pions behave similarly.}\\
@@ -245,7 +244,7 @@ sigmas for each target or show the cuts on the figure are horizontal lines.
 not passed through the final analysis. We were unable to recover the orginal values of the
 fits for these specific figures and we 
 lack the problematic run which have been deleted. At this stage, it would be rather time
-consuming to recover all the data and update the softwares to run on the new machines, so 
+consuming to recover the raw data and update all the softwares to run on the new machines, so 
 we did not produce this figure. If the reviewer think it is necessary to update this 
 figure and provide more information about the discarded data let us know, it is time 
 consuming but of course possible.}
@@ -277,25 +276,17 @@ weights?
 
 {\it They are indeed the counts multiplied by the weights.
 The sum indicated runs over all the recorded events, it is not associated to the weight
-bins or anything like that. We tried to adapt the language in the note to make it clearer.} \\
+bins or anything like that. We adapted the language in the note to make it clearer.} \\
 
 
 12.
 P23, I’d be very worried about the MC modeling acceptance on falling edges like that at the 
 right of the top right plot.
 
-{\it It is indeed an important issue. A related fact to keep in mind (while it is presented 
-later in the note in 2.5.1) is that the main issue there is the quantity of accidentals. Since
-the cross section get really small in this region, accidentals start to overcome
-the signal. We apply a cut
-$p_\perp^2 < 2.5$ GeV$^2$/c$^2$ to remove these regions. One could advocate to lower this 
-cut, but it would affect the outcome of the $\Delta P_\perp^2$, 
-because as often with averages the outliers have a strong impact.
-
-On the bright side, the slope and behavior appear to be rather well described by the MC
-simulation. We feel that a good reproduction of the data is an indication that the 
-acceptance correction will behave properly.} \\
-
+{\it It is indeed a problematic issue, linked to the abscence of radiative effects in the 
+simulation. At the time that it was generated, no better simulation was available. This
+discrepency in $\nu$ motivates to also use it for the binning of the acceptance. This way,
+it limits the impact of this difference.} \\
 
 
 13.
@@ -314,8 +305,8 @@ something is amiss.  Anyway, that’s not where you want readers to be.
 { \it The section has been reworked to clarify what we are doing. Few points you raised 
 are also answered here:
 
-The first set of variables is the one used for the acceptance correction used for results,
-while the second set is only used to evaluate the systematic errors. In the 
+The first set of variables is the one used for the acceptance correction presented in the results,
+while the second set is only used to evaluate the systematic errors associated with the correction. In the 
 note, the formulas are generally given only for the first set for simplicity.
 
 The motivation for using such a strange cut based on the product of different unrelated
@@ -325,15 +316,15 @@ strongly at low $p_\perp^2$ leading to very high weights, however there is no pr
 bin migration
 or low statistics because the generated yield is very high in this region. We found that 
 the best way
-to keep these bins while discarding bins where the sizze of the weight is less problematic 
+to keep these bins while discarding bins where the size of the weight is less problematic 
 but with issues concerning bin migration and statistics was to apply this type of cut.
 
 In term of method, the two
 step acceptance correction is hopefully going to be clearer. It is the same as the method used 
-in the previous L. El Fassi et al. analysis note. The second step of the procedure is
+in the previous L. El Fassi et al. analysis note of eg2 data. The second step of the procedure is
 specifically used to take care of the bins that are removed by the cut on weights. You 
 can see in the formula that the weights
-of the previously calculated acceptance are used in this step, ensuring that we do not
+of the previously calculated acceptance are used in this second step, ensuring that we do not
 double correct the data.
 
 The size of the bins is not constant and is indeed increased in region with small event yield.
@@ -345,8 +336,8 @@ P26, bottom, if you have regions with very low acceptance, should they be cut ou
 
 {\it In the case of the $\Delta P_\perp^2$, we need to measure an average of the
 transverse momentum distribution. Completely cutting a part of the distribution
-would indeed solve the acceptance problem but would make the $\langle p_\perp^2 \rangle$
-measurement meaning less. We therefore have to live with it and do our best to
+would indeed solve the acceptance problems for $\pi^-$ but would make the $\langle p_\perp^2 \rangle$
+measurement meaningless. We therefore have to live with it and do our best to
 reconstruct the whole distribution even if it means having larger error bars.} \\
 
 
@@ -366,16 +357,13 @@ P27 fig.22-
  It's unclear to which point the error bar is associated. I think the common 
 practice is to slightly shift markers horizontally.
 
-{\it Sorry, we overlooked this for these intermediary plots. TO BE CORRECTED} \\
+{\it Sorry, we overlooked this for these intermediary plots.} \\
 
 17.
 P27, Fig. 22 - the right column of plots is not the same as those in Fig. 15.  Why change the 
 variables?
 
-{\it Sorry, it is a mistake on our part, there is no reason. TO BE CORRECTED. And
-add figures after radiative correction!} \\
-
-
+{\it Sorry, it is a mistake on our part, there is no reason.} \\
 
 18.
 P28 - What is Coulolmb Correction applied to? Momentum of charged particles? Could you 
@@ -385,9 +373,9 @@ resolutions ?
 {\it The Coulomb correction is applied to incoming and outgoing electrons as well as
 produced charged pions. Indeed the effect is small in most of the phase space, but 
 by slightly shifting the $z$ distribution it slightly changes the normalization. A
-point to point effect is also visible for low $z$ pions. 
-
-TODO Add figure as a function of A1/3 and z.} \\
+point to point effect is also visible for low $z$ pions. Note that in general, there
+is also a focussing factor in Coulomb corrections, but they happen to cancel out in
+our specific observables.} \\
 
 
 19.
@@ -403,21 +391,21 @@ however, I am missing the physics motivation.  Why does it matter if the quark c
 proton or a neutron?  I think you just clarify the explanation.
 
 {\it This correction is here to take care of the u/d quark imbalance in heavier nuclei.
-Indeed the production rate of positive pions on neutrons is significantly reduced and that
+Indeed the multiplicity of positive pions on neutrons is significantly smaller than on protons and that
 should not be mistaken with absorbtion in the nuclear medium. We clarified the text in the
-note, hopefully it is now clear.} \\
+note.} \\
 
 
 21.
 P33, Sec. 2.5.1 - list the negligible effects.
 
-{\it The sentence has been revised to list all effects tested. } \\
+{\it The sentence has been revised to list all effects tested.} \\
 
 22.
 P34, Fig. 28 - why is the resolution poorer than in Fig. 12?
 
 {\it Resolution is the same, it looks wider because, on this figure, we show the integrated 
-result over the 6 sectors.} \\
+result over the 6 sectors, which are slightly shifted between each other.} \\
 
 
 23.
@@ -426,9 +414,9 @@ above that for this particular sample with two particles in the final state the 
 regions dropped to 0.01?  Doesn’t that mean the target contamination normalization error is 
 smaller than 1\%?
 
-{\it Multiplicity ratios are a double ratio. The claim is that the semi inclusive part 
+{\it Multiplicity ratios are a double ratio. The claim is that the semi-inclusive part 
 is not affected, but the inclusive electron ratio is affected. This is included
-as a normalisation error. We revisited slightly the paragraph to make it clearer.} \\
+as a normalisation error. We revisited the paragraph to make this point clearer.} \\
 
 
 24.
@@ -440,11 +428,13 @@ weights.  Might it also be lower statistics and so you have statistical fluctuat
 to the systematic error?  If so, you are sort of double-counting the statistical error and 
 inflating the systematic error more than it should be.  
 
-{\it This is an interesting question and we might have overlooked this problem. We noted an error
-in our function calculating the statistical errors. This change in size somewhat
-modifies our initial statement, 
-
-TODO Complete the answer when full results are there.} \\
+{\it This is an interesting question and we might have overlooked this problem. Looking into the
+issue we noticed an error in our function calculating the statistical errors. This change 
+would modify our initial statement. Altogether, after reviewing the question, we believe that 
+because the different acceptance are calculated from the same simulated data and applied to 
+the same experimental data, our systematic error calculation should not include the effect 
+of statistical errors. In conclusion, we removed the previous statement and now fully include 
+the systematic errors for the transverse momentum broadening.} \\
 
 25.
 P35 - It would clarify the discussion with a summary or table of the point-to-point systematic 
@@ -458,7 +448,7 @@ we did not think a table would be useful to summarize only two contributions.} \
 P35 -
  add plots with systematic uncertainty bands on it to demonstrate bin-by-bin values.
 
-{\it FIGURES NEED TO BE UPDATED WITH NEW ERROR BAR DISPLAY.} \\
+{\it We add this on the figures intended to be published.} \\
 
 
 27.
@@ -466,7 +456,7 @@ P35, end of top paragraph, you say you don’t include the acceptance systematic
 to me like it is included in Table 8?  What am I missing?
 
 {\it We decided to keep the normalization error, not the point to point. This was not
-said clearly in the text, it is now clarified. TO CLARIFY WHEN SORTED OUT.} \\
+said clearly in the text, it is now changed as mentioned above.} \\
 
 
 28.
@@ -481,7 +471,7 @@ you say in the text.
 
 {\it The reson we quote 1.5, is that one need to move $\pi^+$ one sigma down and $\pi^-$ one
 sigma up. So for the overall normal deviation (sigma) we quadratically sum them,
-leading to 1.5.} \\
+leading to 1.5, you think it should say 2?} \\
 
 30.
 P36, second paragraph of section 3.1.1, “... might be modified if the production time occurs 
@@ -489,7 +479,7 @@ inside the nucleus.”  I think I know what you mean but the language makes no s
 mean if the formation takes place inside the nucleus, right?
 
 {\it This langage refers to figure 1, where we define a production time and a 
-formation time. We tried to rephrase for more clarity.}\\
+formation time. We rephrased for more clarity.}\\
 
 31.
 P42, top, “... that is seen in our result.”  Where do I see what you are discussing in the top 
