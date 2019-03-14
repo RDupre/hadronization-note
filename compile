@@ -11,3 +11,13 @@ pdflatex AnalysisNote
 pdflatex AnalysisNote
 
 rm -f *.{blg,bbl,toc,out,log,aux,dvi,maf,mtc,nlo,brf}*
+
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'
+echo 'please check TODOs and run aspell'

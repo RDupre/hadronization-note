@@ -152,7 +152,8 @@ positrons. In the rest of this analysis, we used only events with a single elect
 \subsubsection{$\pi^-$ Identification}
 \label{PiId}
 
-Pions are detected in the angular range from $\sim$10 to $\sim$140 degrees 
+Pions are detected starting at a momentum of 250 MeV in the angular range 
+from $\sim$10 to $\sim$140 degrees 
 using only DC and SC signals. To identify negatively charged pions, we select 
 negative tracks which were not identified as electrons already. 
 
@@ -192,7 +193,7 @@ The identification of positively charged pions is similar to that of negative
 pions. However, the time of flight plot is significantly more busy (see figure 
 \ref{PipTOF}), due to an important contamination from $K^+$s and protons at a
 high momentum. As the CC is not efficient enough for a hadron separation, the 
-numerous kaons and protons should be removed by the following tighter TOF cuts:
+kaons and protons contributions are reduced by the following tighter TOF cuts:
 
 \begin{subequations}\label{TOF-Pip}
 \begin{align}
@@ -203,10 +204,18 @@ numerous kaons and protons should be removed by the following tighter TOF cuts:
 \end{align}
 \end{subequations}
 
-The much more apparent contamination sources than for negative pions, motivates us to study 
-the TOF profile much more thoroughly. One can see in figures~\ref{TOF-1}, \ref{TOF-2} and 
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=8cm] {chap5-fig/pip_data.png} 
+\caption {$\Delta \beta$ of positively charged particles as a function of momentum (GeV/c). The red lines shows the applied cuts to select positive pions. The blue lines indicate other particles' theoretical positions, and present from top to 
+bottom positrons, muons, kaons and protons.}
+\label{PipTOF}
+\end{figure}
+
+In opposition with negative pions, contamination sources are apparent and motivate a careful 
+study of the TOF profile. One can see in figures~\ref{TOF-1}, \ref{TOF-2} and 
 \ref{TOF-3} the $\Delta \beta$ profiles for many momentum slices. In figure~\ref{TOF-1}
-one can see some contamination from lighter leptons ($e+$ and $\mu^+$). These represent
+one can see some contamination from lighter leptons ($e^+$ and $\mu^+$). These represent
 a very small amount and one can see some justification for the choice of a $\pm 0.03$
 cut as these particles do not appear to be discernable beyond that level. Similarly
 in figure~\ref{TOF-2} one can see the contribution from kaons. The larger contribution
@@ -242,24 +251,23 @@ correspond to the proton mass.}
 \end{figure}
 
 These cuts minimize the kaon contamination, below 2.5~GeV/c, and the 
-proton contamination for all momenta. The kaon contribution cannot be avoided, however, it should remain small ($\sim$ 3\% according to simulation) 
+proton contamination for all momenta. The kaon contribution cannot be avoided, however, it should remain small (peaking $\sim$ 3\% according to our simulation) 
 with only a small effect on our final results (see section \ref{SysId} 
 for more details). Because protons could lead to even more contamination than kaons, 
 a stricter cut is used at a high momentum. This cut is also justified by 
 HERMES data \cite{Airapetian:2007vu}, which showed a very different behavior of protons compared to other hadrons.
 
-\begin{figure}[tbp]
-\centering
-\includegraphics[width=8cm] {chap5-fig/pip_data.png} 
-\caption {$\Delta \beta$ of positively charged particles as a function of momentum (GeV/c). The red lines shows the applied cuts to select positive pions. The blue lines indicate other particles' theoretical positions, and present from top to 
-bottom positrons, muons, kaons and protons.}
-\label{PipTOF}
-\end{figure}
-
 \subsubsection{Target Determination}
 
 To differentiate between the two targets and remove the background, we need to 
-determine the origin of our final-state particles. As illustrated in figure~\ref{vertex}, the small misalignment of the beam with the CLAS detector led to an artificial shift on different sectors' z-vertex positions. To correct from this effect, we added the shift shown in table~\ref{tab:vertex} when determining each particle's vertex position. Those values were obtained from the fit of the solid target distribution on each sector.
+determine the point of origin of our final-state particles. As illustrated in figure~\ref{vertex}, the small misalignment of the beam with the CLAS detector led to an artificial shift on different sectors' z-vertex positions. To correct from this effect, we added the shift shown in table~\ref{tab:vertex} when determining each particle's vertex position. Those values were obtained from the fit of the solid target distribution on each sector.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=10cm] {chap5-fig/Vertex_el_data.png}
+\caption {Sector-by-sector electrons' vertex distributions. The latter are reconstructed along the beam direction and relative to the center of CLAS located at 0~cm. The red lines show the applied cuts to select the two targets.}
+\label{vertex}
+\end{figure}
 
 \begin{table}[p]
   \centering
@@ -279,6 +287,17 @@ determine the origin of our final-state particles. As illustrated in figure~\ref
   \label{tab:vertex}
 \end{table}
 
+The detected electrons are associated with the solid target if their vertex 
+position is less than 1.5~cm ($\sim$3~$\sigma$) from the values shown on table 
+\ref{tab:targets}. For the liquid target, the cut is a bit larger, 2 cm, in order to count for the cryogenic target's size (see figure \ref{vertex}). The pions' vertex was checked against the electron one and was imposed to satisfy this additional condition $| Vz^{e^-} - Vz^{\pi} | < 3$ cm (see figure \ref{fig:dvzpi}).
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=8cm] {chap5-fig/Vertex_pi_data.png}
+\caption {The difference between electrons and pions z-vertex positions. $\pi^+$s and $\pi^-$ are plotted, respectively, in the top and bottom panels. The red lines show the applied cuts to select both pions.}
+\label{fig:dvzpi}
+\end{figure}
+
 The position of our targets could also vary from a run to another, but this was not significant in this experiment. Indeed, except for aluminum, other targets remained in the same position within one or two millimeters. All targets' positions, in CLAS coordinates, are given in table \ref{tab:targets}. 
 We show in figures \ref{VertexSolid} and \ref{VertexLiquid} the evolution 
 of the position of the targets with run number. The data where the aluminum
@@ -286,7 +305,7 @@ target is off by 1 cm has been excluded from the analysis. Other variations
 appear to be of a mm or less, while the gap between the solid and liquid target
 is about 5 cm. They should therefore have negligible contribution to the 
 error on acceptance corrections in regard to the error budget already associated
-to the procedure.
+to the measurements.
 
 \begin{table}[p]
   \centering
@@ -310,7 +329,8 @@ to the procedure.
 \includegraphics[width=7.5cm] {answer-fig/VertexSn.png} 
 \includegraphics[width=7.5cm] {answer-fig/VertexPb.png} 
 \caption {Vertex origin along $z$ (in cm) of electrons as a function of run 
-number for the different solid targets.}
+number for the different solid targets. Top left is for carbon, top right
+aluminum, middle left iron, middle right tin and bottom is for lead.}
 \label{VertexSolid}
 \end{figure}
 
@@ -321,26 +341,9 @@ number for the different solid targets.}
 \includegraphics[width=7.5cm] {answer-fig/VertexDeutSn.png} 
 \includegraphics[width=7.5cm] {answer-fig/VertexDeutPb.png} 
 \caption {Vertex origin along $z$ (in cm) of electrons as a function of run 
-number for the deuterium target in different solid targets configurations.}
+number for the deuterium target in different solid targets configurations.
+Top left is for carbon, top right iron, bottom left tin and bottom right is for lead.}
 \label{VertexLiquid}
-\end{figure}
-
-The detected electrons are associated with the solid target if their vertex 
-position is less than 1.5~cm ($\sim$3~$\sigma$) from the values shown on table 
-\ref{tab:targets}. For the liquid target, the cut is a bit larger, 2 cm, in order to count for the cryogenic target's size (see figure \ref{vertex}). The pions' vertex was checked against the electron one and was imposed to satisfy this additional condition $| Vz^{e^-} - Vz^{\pi} | < 3$ cm (see figure \ref{fig:dvzpi}).
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=10cm] {chap5-fig/Vertex_el_data.png}
-\caption {Sector-by-sector electrons' vertex distributions. The latter are reconstructed along the beam direction and relative to the center of CLAS located at 0~cm. The red lines show the applied cuts to select the two targets.}
-\label{vertex}
-\end{figure}
-
-\begin{figure}[tbp]
-\centering
-\includegraphics[width=8cm] {chap5-fig/Vertex_pi_data.png}
-\caption {The difference between electrons and pions z-vertex positions. $\pi^+$s and $\pi^-$ are plotted, respectively, in the top and bottom panels. The red lines show the applied cuts to select both pions.}
-\label{fig:dvzpi}
 \end{figure}
 
 \subsubsection{Data Quality}
@@ -355,8 +358,8 @@ this ratio will be off and indicate the problematic runs. In figure
 fitted these ratios to determine the mean value for each target, then we discarded 
 runs that were 5~$\sigma$ away from the appropriate mean. Must note that these 
 ratios were consistent with our target's thicknesses given in \cite{Hakobyan:2008zz} 
-except for a carbon target. For that reason, the density of the latter was 
-recently remeasured, and its new value was finally matching our 
+except for the carbon target. For that reason, the density of the latter was 
+remeasured, and its new value was finally matching our 
 data\footnote{i.e. (1.747+/-0.0007)g/cm$^3$ instead of 2.235 g/cm$^3$}.
 
 \begin{figure}[tbp]
@@ -365,6 +368,8 @@ data\footnote{i.e. (1.747+/-0.0007)g/cm$^3$ instead of 2.235 g/cm$^3$}.
 \caption {Ratio of scattered electrons yields (solid over deuterium) for each run.}
 \label{DataQ}
 \end{figure}
+
+%TODO provide an updated target table
 
 \subsection{Extraction of Multiplicity Ratio and $\Delta$P$_\perp^2$}
 \label{sec:obs}
@@ -383,7 +388,7 @@ data.}
 \label{DISKine}
 \end{figure}
 
-We also apply a cut on the energy transferred fraction, $y = \nu/E_{beam} < 0.85$. This cut aims to remove the low energy electrons that are significantly affected by radiative effects and sat at the limit of our trigger threshold.
+We also apply a cut on the energy transferred fraction, $y = \nu/E_{beam} < 0.85$. This cut aims to remove the low energy electrons that are significantly affected by radiative effects and are at the limit of our trigger threshold.
 
 \subsubsection{Method}
 \label{RatioCalc}
@@ -441,22 +446,23 @@ Thus, new expressions of the weighted statistical uncertainties are derived:
 Following the first round of questions from the analysis review committee, we
 reflected about this implementation of error bars and possible overlap with the 
 systematic errors evaluated below. First we found an error with how the formula
-above was implemented and corrected it. This reduces the size of statistical 
+for transverse momentum broadening was implemented and corrected it. This 
+reduces the size of statistical 
 error bars of the transverse momentum broadening by roughly a factor 2 to 3. 
-
-TODO See new results and re evaluate statement below.
-We found first that the correlation between the weights should reduce
+We also reflected that the correlation between the weights should reduce
 the statistical errors. In a given bin the weights associated with each 
 targets are always of similar sizes, this correlation will reduce the size of 
 error bars. However, we do not see a method to properly take this 
-effect fully into account in term of purely statistical error bars. In order
-to solve this issue we came back to a point by the committee on the topic of 
-systematic error bars (Q 24). There it was noted that some of these effects are
-double counted once in the statistical error and once in the systematic. As these
-errors are solely due to the acceptance correction, we decided to account them 
-only in the systematic error budget. So we reverted statistical errors to equations
-\ref{eq:MRError} and \ref{eq:DPtError} and keep the full systematic errors as they
-were evaluated before.
+effect fully into account in term of purely statistical error bars, and
+remains as is. Finally, 
+it was noted that some of the effects were double counted once through the 
+statistical error on the acceptance correction and the systematics associated
+with the correction. So, we decided to account only the systematic error budget
+and use purely statistical errors of equations
+\ref{eq:MRError} and \ref{eq:DPtError}. In summary, we concluded that the 
+systematic error contribution associated to the statistics of the 
+simulation sample were indeed a double counting and are not used anymore
+in any error bars.
 
 \subsubsection{Preliminary Results}
 \label{prelim}
