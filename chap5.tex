@@ -491,13 +491,13 @@ broadening (bottom) before applying any corrections.}
 \label{sec:accept}
 
 The acceptance correction consists of applying weights to the experimental data
-event by event to correct for any detection inefficiencies of used detectors.
+event by event to correct for the detection inefficiencies of the detectors.
 Incidentally, it also corrects for other small detection issues, such as 
-misidentification and re-scattering on detector material. The quality 
+misidentification and scatterings on detector material. The quality 
 of the correction depends on the ability of the simulation to reproduce the 
 experiment, the accumulated statistics, and the size of interfering effects, such 
-as the bin migration. For this correction, we applied the method from the 
-approved and published analysis from the same eg2 data~\cite{ElFassi:2008}.
+as bin migration. For this correction, we applied the method from the 
+approved analysis from the same eg2 data~\cite{ElFassi:2008}.
 
 \paragraph{Simulation} ~\\
 To correct for acceptance effects, we simulated a total of 100 million events 
@@ -506,7 +506,7 @@ event generator that was slightly modified to include Fermi motion effects. The
 generated events are processed by CLAS softwares (GSIM, GPP and user\_ana) 
 to simulate the detector and the reconstruction process in a fashion similar 
 to that done with the experimental data.
-% TODO GPP factors
+% TODO GPP factors: -a1.7 -b1.9 -c2. -f1. -R41147 (likely the one used)
 
 The simulated data are processed like the experimental data by 
 applying the cuts described in the section \ref{sec:pid}. Overall the 
@@ -515,12 +515,18 @@ affect us and have to be understood. First, the efficiency of the CC is
 overestimated in the simulation. On the electron side the signal is a little stronger in the simulation (11 
 photo-electrons) compared to experimental data (8 photo-electrons), but this 
 feature should not affect us too much, because we are cutting only the tail of the 
-distribution in both cases. Second, since in the simulation the beam is perfectly aligned with CLAS, the vertex cuts do not need to be shifted from one sector to an other. Therefore, we do not apply the shift from table \ref{tab:vertex} to the simulated data; the resulting cuts are shown in figure~\ref{simvertex}.
+distribution in both cases. Second, since in the simulation the beam is perfectly 
+aligned with CLAS, the vertex cuts do not need to be shifted from one sector to 
+another. Therefore, we do not apply the shift from table \ref{tab:vertex} to the 
+simulated data; the resulting cuts are shown in figure~\ref{simvertex}.
 
 \begin{figure}[tpb]
 \centering
 \includegraphics[width=9cm] {chap5-fig/Vertex_el_sim.png}
-\caption {Sector by sector electrons' vertex distributions from the {\bf simulated data}. The latter are reconstructed along the beam direction, and relative to the CLAS center. The red lines show the used cuts to select both targets.}
+\caption {Sector by sector electrons' vertex distributions from the 
+{\bf simulated data}. The latter are reconstructed along the beam direction, 
+and relative to the CLAS center. The red lines show the used cuts to select 
+both targets.}
 \label{simvertex}
 \end{figure}
 
@@ -530,7 +536,7 @@ whether or not, we can integrate over any variables in this correction.
 Comparisons between simulated and experimental data are shown in figures 
 \ref{fig:compNuQ2} to \ref{fig:compPhih}. The agreement is reasonable, but not 
 perfect. The differences are due to the PYTHIA simulation, which is not including some 
-physical effects, such as radiative and diffractive processes.
+physical effects, such as radiative effects and diffractive processes.
 
 \begin{figure}[tbp]
 \centering
@@ -673,7 +679,7 @@ and
 N_{rec} > 4,
 \end{equation}
 where $\delta \omega / \omega$ is the relative error on the weight, and $R_c$ is the 
-proportion of reconstructed events initially generated in an other kinematical bin. 
+proportion of reconstructed events initially generated in another kinematical bin. 
 Figure~\ref{fig:AccCoef} shows $\omega$ distributions after applying these cuts. Around 
 900 bins remain for both targets, but we noticed that these weights are much larger for 
 $\pi^-$ compared to $\pi^+$, as an indication of a larger correction for the inbent 
@@ -683,11 +689,12 @@ strongly at low \pt leading to very high weights, however there is no problem of
 or low statistics because the generated yield is very high in this region. We found that 
 the best way
 to keep these bins while discarding bins where the weight might be slightly smaller but which 
-have issues with bin migration and statistics was to apply this set of cuts.
+have issues with bin migration and statistics was to apply the cuts presented above.
 
-In order to correct for these droped bins and reduce the sensitivity to the arbitrary in
-the choice of the weights' cuts, we corrected the data with an additional two dimensional 
-reweighting factor as:
+This process can create a bias, if for instance low $Q^2$ bins are more often dropped.
+So, in order to correct for these bins and reduce the sensitivity to the arbitrary in
+the choice of the cuts, we corrected the data with an second two dimensional 
+acceptance correction as:
 \begin{equation}
 \text{Acc}_2(\nu,p_h) = {\sum_{rec} \omega (\nu,x_{Bj},p_h,t)\over N_{gen}(\nu,p_h)}.
 \end{equation}
@@ -704,7 +711,10 @@ fraction of the event in the first place and is a good indication of the sanity 
 \label{fig:AccCoef}
 \end{figure}
 
-In order to correct the number of electrons in multiplicity ratios, we followed the semi-inclusive acceptance correction method by using only the two first dimensions ($\nu$ and $Q^2$). However, the reweighting was not used for electrons as all non-empty bins pass the two cuts, \ref{eq:AccL1} and \ref{eq:AccL2}.
+In order to correct the number of electrons in multiplicity ratios, we followed the 
+semi-inclusive acceptance correction method by using only the two first dimensions 
+($\nu$ and $Q^2$). However, the reweighting was not used for electrons as all 
+non-empty bins pass the two cuts, \ref{eq:AccL1} and \ref{eq:AccL2}.
 
 \begin{figure}[tbp]
 \centering
@@ -720,9 +730,18 @@ for multiplicity ratios (top) and transverse momentum broadening
 
 Figure \ref{fig:AcceptPlots}, where only statistical errors are 
 represented, shows the new results after applying the acceptance correction.
-The acceptance correction effects appear to be in the order of $10$\% for 
-multiplicity ratios and $30$\% for the transverse momentum broadening. This is a surprisingly significant correction with regard to a few centimeters separating the two targets. The reason for such a large correction is that the small shift in the $z$-vertex position changes slightly the minimum angle of the detector in the region where most hadron production is concentrated, {\it i.e.} at low \pt close to the beam line. The $\pi^-$s were more affected due to the inbending magnetic field. Indeed, the low \pt $\pi^-$s had very low acceptance which led to large correction factors. The large spread in weights makes the errors on \dpt very large, and the related results difficult to exploit. However, our transverse momentum broadening 
-results of both pions matched each other after this correction, which is similar 
+The acceptance correction effects appear to be of the order of $10$\% for 
+multiplicity ratios and $30$\% for the transverse momentum broadening. This 
+is a surprisingly significant correction with regard to a few centimeters 
+separating the two targets. The reason for such a large correction is that 
+the small shift in the $z$-vertex position changes slightly the minimum 
+angle of the detector in the region where most hadron production is 
+concentrated, {\it i.e.} at low \pt close to the beam line. The 
+$\pi^-$s were more affected due to the inbending magnetic field. Indeed, 
+the low \pt $\pi^-$s had very low acceptance which led to large correction 
+factors. The large spread in weights makes the errors on \dpt rather large. 
+However, the transverse momentum broadening 
+results of both pions matched each other better after this correction, which is similar 
 to the HERMES results (see figure~\ref{fig:her3}).
 
 \subsubsection{Coulomb Correction}
@@ -742,8 +761,7 @@ electrostatic potential at the center of nuclei. The latter is evaluated as
 $V_0= -3 \alpha_{EM} Z / (2 R)$, where $\alpha_{EM}$ is the fine-structure 
 constant, $Z$ is the proton number, and $R$ is the radius of the nuclei. Table 
 \ref{tab:Coulomb} contains the used values of $V_0$ and $\bar V$ on different 
-nuclear target's analysis. The Coulomb correction is applied to both electrons 
-and charged pions before calculating the plotted kinematical variables.
+nuclear target's analysis.
 
 \begin{table}[htbp]
   \centering
@@ -762,7 +780,26 @@ Pb  & -23 &   -19 \\
   \label{tab:Coulomb}
 \end{table}
 
-TODO Add figures of the effect and comment from review answers!
+The Coulomb correction is applied to incoming and outgoing electrons as well as
+produced charged pions. The effect of the correction is shown in figure \ref{fig:CCPlots},
+we observe that it is small in most of the phase space, but by slightly shifting 
+the $z$ distribution it affects the normalization at a couple of percent level. A
+point to point effect is also visible for low $z$ pions. Note that in general, there
+is also a focussing factor in Coulomb corrections, but they happen to cancel out in
+our specific observables.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=7.4cm] {chap5-fig/b_RvA.png} 
+\includegraphics[width=7.4cm] {chap5-fig/b_RvZ.png} 
+\includegraphics[width=7.4cm] {chap5-fig/b_PvA.png} 
+\includegraphics[width=7.4cm] {chap5-fig/b_PvQ2.png} 
+\caption {Preliminary results are compared with the acceptance corrected ones, 
+for multiplicity ratios (top) and transverse momentum broadening 
+(bottom). Only statistical errors are shown.}
+\label{fig:CCPlots}
+\end{figure}
+
 
 \subsubsection{Radiative Correction}
 \label{RadCor}
@@ -805,7 +842,7 @@ $\delta = \sigma_{obs} / \sigma_B$ at given kinematics. Table \ref{tab:RCBins}
 shows the binning used to calculate the radiative correction weights.
 We chose to make a finer 
 binning for the radiative corrections than for acceptance as the computing time 
-to calculate weights is more reasonnable (around 1000 days of cpu time). 
+to calculate weights is more reasonnable ("only" around 1000 days of CPU time). 
 
 \begin{table}[htbp]
 \center
@@ -843,10 +880,11 @@ Bin Nb & $\nu$ & \xb & $p_\pi$ & $-t$ & $\phi$ \\ \hline
 
 We show in figure \ref{fig:RCexample} a selected sample of radiative correction factors
 ($= \delta_{Fe} / \delta_D$) in order to illustrate the expected effect on observables.
-In the large majority of the cases the factors are within 5\% of 1, so we do not expect to
+In the large majority of the cases the factors are within 5\% of 1. Therefore, we do not expect to
 see a strong effect on the final results where these will be integrated. This is confirmed 
-in figure \ref{} ... In the case of the transverse momentum braodening, the variations
-appear to ...
+in figure \ref{fig:RCPlots}, where the radiative correction appears limited to a few percents. 
+In the case of the transverse momentum braodening, the variations appear to be similar in size 
+and not too worrisome.
 
 \begin{figure}[tbp]
 \centering
@@ -863,7 +901,12 @@ $-t$ for a selection of bins specified above each figure.}
 
 \begin{figure}[tbp]
 \centering
-\caption {Preliminary results ..., 
+\includegraphics[width=7.4cm] {chap5-fig/b_RvA.png} 
+\includegraphics[width=7.4cm] {chap5-fig/b_RvZ.png} 
+\includegraphics[width=7.4cm] {chap5-fig/b_PvA.png} 
+\includegraphics[width=7.4cm] {chap5-fig/b_PvQ2.png} 
+\caption {Preliminary results including radiative corrections
+compared to the ones without, 
 for multiplicity ratios (top) and transverse momentum broadening 
 (bottom). Only statistical errors are shown.}
 \label{fig:RCPlots}
@@ -1126,3 +1169,5 @@ and 0.520+-0.011 for pi-. Note that it is not a double ratio and should be affec
 moreover they do not make an isospin correction which is 1.5\%.
 
 Put my result here
+
+\subsubsection{Pion ratio from HERMES}
