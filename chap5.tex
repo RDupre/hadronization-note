@@ -472,14 +472,16 @@ figure~\ref{fig:prelim} a few preliminary results before the application of
 any corrections. These preliminary results will be used also to illustrate 
 the effects of the corrections discussed below.
 
-\begin{figure}[htb]
+\begin{figure}[p]
 \centering
-\includegraphics[width=7.4cm] {chap5-fig/a_RvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/a_RvZ.png} 
-\includegraphics[width=7.4cm] {chap5-fig/a_PvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/a_PvNu.png} 
-\caption {Results for multiplicity ratios (top) and the transverse momentum 
-broadening (bottom) before applying any corrections.}
+\includegraphics[width=7.4cm] {new-fig/40_Adep_Ratio_A13_0.png} 
+\includegraphics[width=7.4cm] {new-fig/44_Adep_DePts_A13_0.png} 
+\includegraphics[width=7.4cm] {new-fig/41_Ndep_Ratio_Nu_0.png} 
+\includegraphics[width=7.4cm] {new-fig/46_Qdep_DePts_Q2_0.png} 
+\includegraphics[width=7.4cm] {new-fig/42_zdep_Ratio_Zz_0.png} 
+\includegraphics[width=7.4cm] {new-fig/47_zdep_DePts_Zz_0.png} 
+\caption {Results for multiplicity ratios (left) and the transverse momentum 
+broadening (right) before applying any corrections.}
 \label{fig:prelim}
 \end{figure}
 
@@ -691,6 +693,13 @@ the best way
 to keep these bins while discarding bins where the weight might be slightly smaller but which 
 have issues with bin migration and statistics was to apply the cuts presented above.
 
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=14cm] {chap5-fig/pawpipdeut.png}
+\caption {The extracted acceptance correction weights for pions on a deuterium target (not re-weighted).}
+\label{fig:AccCoef}
+\end{figure}
+
 This process can create a bias, if for instance low $Q^2$ bins are more often dropped.
 So, in order to correct for these bins and reduce the sensitivity to the arbitrary in
 the choice of the cuts, we corrected the data with an second two dimensional 
@@ -704,27 +713,22 @@ in these equation is in fact to keep this reweighting factors, $\omega_2 = 1/\te
 the level of a few percents. This indicates that the previous method only missed a small 
 fraction of the event in the first place and is a good indication of the sanity of the method.
 
-\begin{figure}[tbp]
-\centering
-\includegraphics[width=14cm] {chap5-fig/pawpipdeut.png}
-\caption {The extracted acceptance correction weights for pions on a deuterium target (not re-weighted).}
-\label{fig:AccCoef}
-\end{figure}
-
 In order to correct the number of electrons in multiplicity ratios, we followed the 
 semi-inclusive acceptance correction method by using only the two first dimensions 
 ($\nu$ and $Q^2$). However, the reweighting was not used for electrons as all 
 non-empty bins pass the two cuts, \ref{eq:AccL1} and \ref{eq:AccL2}.
 
-\begin{figure}[tbp]
+\begin{figure}[p]
 \centering
-\includegraphics[width=7.4cm] {chap5-fig/b_RvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_RvZ.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_PvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_PvQ2.png} 
-\caption {Preliminary results are compared with the acceptance corrected ones, 
-for multiplicity ratios (top) and transverse momentum broadening 
-(bottom). Only statistical errors are shown.}
+\includegraphics[width=7.4cm] {new-fig/50_Adep_Ratio_A13_1.png} 
+\includegraphics[width=7.4cm] {new-fig/54_Adep_DePts_A13_1.png} 
+\includegraphics[width=7.4cm] {new-fig/51_Ndep_Ratio_Nu_1.png} 
+\includegraphics[width=7.4cm] {new-fig/56_Qdep_DePts_Q2_1.png} 
+\includegraphics[width=7.4cm] {new-fig/52_zdep_Ratio_Zz_1.png} 
+\includegraphics[width=7.4cm] {new-fig/57_zdep_DePts_Zz_1.png} 
+\caption {Preliminary raw results are compared with the acceptance corrected ones, 
+for multiplicity ratios (left) and transverse momentum broadening 
+(right). Only statistical errors are shown.}
 \label{fig:AcceptPlots}
 \end{figure}
 
@@ -790,13 +794,15 @@ our specific observables.
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=7.4cm] {chap5-fig/b_RvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_RvZ.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_PvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_PvQ2.png} 
-\caption {Preliminary results are compared with the acceptance corrected ones, 
-for multiplicity ratios (top) and transverse momentum broadening 
-(bottom). Only statistical errors are shown.}
+\includegraphics[width=7.4cm] {new-fig/50_Adep_Ratio_A13_2.png} 
+\includegraphics[width=7.4cm] {new-fig/54_Adep_DePts_A13_2.png} 
+\includegraphics[width=7.4cm] {new-fig/51_Ndep_Ratio_Nu_2.png} 
+\includegraphics[width=7.4cm] {new-fig/56_Qdep_DePts_Q2_2.png} 
+\includegraphics[width=7.4cm] {new-fig/52_zdep_Ratio_Zz_2.png} 
+\includegraphics[width=7.4cm] {new-fig/57_zdep_DePts_Zz_2.png} 
+\caption {Preliminary results are compared with with and without Coulomb correction,
+the acceptance remains applied for both. The multiplicity ratios are presented on the left 
+and the transverse momentum broadening on the right. Only statistical errors are shown.}
 \label{fig:CCPlots}
 \end{figure}
 
@@ -899,16 +905,18 @@ $-t$ for a selection of bins specified above each figure.}
 \label{fig:IsoSpin}
 \end{figure}
 
-\begin{figure}[tbp]
+\begin{figure}[p]
 \centering
-\includegraphics[width=7.4cm] {chap5-fig/b_RvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_RvZ.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_PvA.png} 
-\includegraphics[width=7.4cm] {chap5-fig/b_PvQ2.png} 
+\includegraphics[width=7.4cm] {new-fig/60_Adep_Ratio_A13_3.png} 
+\includegraphics[width=7.4cm] {new-fig/64_Adep_DePts_A13_3.png} 
+\includegraphics[width=7.4cm] {new-fig/61_Ndep_Ratio_Nu_3.png} 
+\includegraphics[width=7.4cm] {new-fig/66_Qdep_DePts_Q2_3.png} 
+\includegraphics[width=7.4cm] {new-fig/62_zdep_Ratio_Zz_3.png} 
+\includegraphics[width=7.4cm] {new-fig/67_zdep_DePts_Zz_3.png} 
 \caption {Preliminary results including radiative corrections
-compared to the ones without, 
-for multiplicity ratios (top) and transverse momentum broadening 
-(bottom). Only statistical errors are shown.}
+compared to the ones without (acceptance and Coulomb corrections remain applied in both), 
+for multiplicity ratios (left) and transverse momentum broadening 
+(right). Only statistical errors are shown.}
 \label{fig:RCPlots}
 \end{figure}
 
@@ -971,8 +979,8 @@ this result was expected and demonstrates the importance of this correction.
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=8.5cm] {chap5-fig/c_RvA.png}
-\caption {Multiplicity ratios as a function of $A^{1/3}$ with the isospin correction applied.}
+\includegraphics[width=8.5cm] {new-fig/IsospinCorrection.png}
+\caption {Multiplicity ratios as a function of $A^{1/3}$ with and without the isospin correction applied.}
 \label{fig:IsoPlot}
 \end{figure}
 
