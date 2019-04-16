@@ -920,7 +920,10 @@ both $\pi$ multiplicities regardless of nuclear effects. Using Hall~C results
 correction factors for the imbalance of u/d quarks in heavy nuclei compared
 to deuterium. Our simple estimation is solely based on proton and neutron 
 numbers and assumes that this isospin correction does not depend on any
-kinematic variable. We found that multiplicity ratios of $\pi^+$ need small
+kinematic variable. We decide to apply such a simple correction to make it easy
+to remove it for comparison with models or other data in the future.
+
+We found that multiplicity ratios of $\pi^+$ need small
 corrections, shown in table~\ref{tab:isospin}. The effect on $\pi^-$s was 
 found to be consistent with zero, so no correction was applied to their 
 multiplicity ratios. We attribute a normalization error to the finale results
@@ -964,6 +967,7 @@ charged pions became parallel after the isospin correction\footnote{Within
 normalization errors presented in section \ref{sec:TotSys}} (see figure 
 \ref{fig:IsoPlot}). Considering previous measurements and existing models, 
 this result was expected and demonstrates the importance of this correction.
+%TODO Check if that is still true
 
 \begin{figure}[tbp]
 \centering
@@ -972,34 +976,40 @@ this result was expected and demonstrates the importance of this correction.
 \label{fig:IsoPlot}
 \end{figure}
 
-\subsubsection{Endcap correction}
+%\subsubsection{Endcap correction}
 
-TO BE IMPLEMENTED IN THE ANALYSIS
+%TO BE IMPLEMENTED IN THE ANALYSIS
 
-The goal of this work is to correct the measured multiplicity ratio:
-\begin{equation}
-  R_h^A |_{corr} = {N_h^A / N_e^A \over (N_h^D-N_h^{EC}) / (N_e^D-N_e^{EC})},
-\end{equation}
-with the $EC$ target being the endcaps of the liquid target. Using a Taylor expension at first order for small $N^{EC}$, we find that:
-\begin{equation}
-  {N_h^D-N_h^{EC} \over N_e^D-N_e^{EC}} = {N_h^D \over N_e^D} - {N_h^{EC} \over N_e^D} + {N_e^{EC} N_h^D \over {N_e^D}^2}.
-\end{equation}
-After few straightforward transformation, we get
-\begin{equation}
-  R_h^A |_{corr} = R_h^A \left( 1 - {N_e^{EC} \over N_e^D} \left( 1-R_h^{Al} \right) \right).
-\end{equation}
-Based on target thickness ${N_e^{EC} \over N_e^D} \sim 0.03$ and $R_h^{Al} \sim 0.65$, the correction is on average a 1\% decrease of the measured multiplicity ratio.
-
-With the same method, the transverse momentum broadening can be corrected with:
-\begin{equation}
-  \Delta P_T^2 |_{corr} = \Delta P_T^2 + R_h^{Al} {N_e^{EC} \over N_e^D} \Delta P_T^2|_{Al}
-\end{equation}
-
+%The goal of this work is to correct the measured multiplicity ratio:
+%\begin{equation}
+%  R_h^A |_{corr} = {N_h^A / N_e^A \over (N_h^D-N_h^{EC}) / (N_e^D-N_e^{EC})},
+%\end{equation}
+%with the $EC$ target being the endcaps of the liquid target. Using a Taylor expension at first order for small $N^{EC}$, we find that:
+%\begin{equation}
+%  {N_h^D-N_h^{EC} \over N_e^D-N_e^{EC}} = {N_h^D \over N_e^D} - {N_h^{EC} \over N_e^D} + {N_e^{EC} N_h^D \over {N_e^D}^2}.
+%\end{equation}
+%After few straightforward transformation, we get
+%\begin{equation}
+%  R_h^A |_{corr} = R_h^A \left( 1 - {N_e^{EC} \over N_e^D} \left( 1-R_h^{Al} \right) \right).
+%\end{equation}
+%Based on target thickness ${N_e^{EC} \over N_e^D} \sim 0.03$ and $R_h^{Al} \sim 0.65$, the correction is on average a 1\% decrease of the measured multiplicity ratio.
+%
+%With the same method, the transverse momentum broadening can be corrected with:
+%\begin{equation}
+%  \Delta P_T^2 |_{corr} = \Delta P_T^2 + R_h^{Al} {N_e^{EC} \over N_e^D} \Delta P_T^2|_{Al}
+%\end{equation}
+%
 
 \subsection{Systematic Uncertainties}
 \label{sec:TotSys}
 
-In this section, we are presenting details of our two types of systematic uncertainties. The point-to-point systematic errors, that vary with kinematical variables, were calculated bin by bin for each result. They are caused by uncertainties on the particles' identification cuts and the CLAS acceptance. The normalization errors are attributed globally since they don't depend on kinematics. They are due to acceptance effects, target's misidentification, and the isospin correction.
+In this section, we are presenting details the systematic uncertainties. The 
+point-to-point systematic errors, that vary with kinematical variables, were 
+calculated bin by bin for each result. They are caused by uncertainties on the 
+particles' identification cuts and the CLAS acceptance. The normalization 
+errors are attributed globally since they don't depend on kinematics. They 
+are due to acceptance effects, target's misidentification, and the isospin 
+correction.
 
 \subsubsection{Quality of the Detection}
 \label{SysId}
